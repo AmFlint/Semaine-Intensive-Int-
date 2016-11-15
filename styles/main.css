@@ -1,5 +1,322 @@
 @charset "UTF-8";
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
 html {
 	font-size: 62.5%;
+	color: white;
 }
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+main {
+	background-color: #2a2a2a;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+a, a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+/*	-------------------- HEADER
+	------------------------------ */
+
+header {
+	width: 100%;
+	position: fixed;
+	padding-top: 2.5rem;
+	z-index: 1;
+}
+
+header #lien {
+	width: 20%;
+}
+
+.logo {
+	width: 20%;
+	float: left;
+	margin-top: -2rem;
+	margin: -2rem 0 0 2rem;
+}
+
+.logo h2, .logo img{
+	float: left;
+}
+
+.logo h2 {
+	font-size: 2.5rem;
+	margin-top: 4rem;
+	font-weight: 700;
+}
+
+nav {
+	float : right;
+	width: 60%;
+	font-size: 2rem;
+}
+
+nav a {
+	font-weight: 300;
+	float: right;
+	margin-right: 4rem;
+	padding: 1rem 2rem;
+}
+
+nav a:first-child {
+	margin-right: 6.5rem;
+}
+
+nav a:hover {
+	background-color: rgba(255, 255, 255, .7);
+	color: #000;
+}
+/* 	------------------- SECTION TOP HAUT DE PAGE
+	---------------------------------------------- */
+
+#top {
+	position: relative;
+}
+
+.slogan {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -5rem;
+	margin-left: -20rem;
+	font-family: "Lora" serif;
+}
+
+h1 {
+	font-size: 6rem;
+	text-transform: uppercase;
+}
+
+.slogan p {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+
+/* 	----------------- SECTION ICONES 
+	-------------------------------- */
+
+#icone {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin: 4.4rem auto 6rem auto;
+}
+
+.w25 {
+	width: 25%;
+	float: left;
+}
+
+figcaption {
+	text-transform: uppercase;
+}
+
+.w25 figure img , .w25 figcaption {
+	margin-bottom: 1rem;
+}
+
+/* ----------------- SECTION PRODUITS 
+	----------------------------------- */
+
+#produits {
+	width: 95%;
+	margin: 0 auto;
+	background-color: #1f1f1f;
+	display: flex;
+	justify-content: space-around;
+}
+
+#produits h2 {
+	text-align: center;
+	font-family: 'Lora', serif;
+	font-size: 7.2rem;
+	font-weight: 700;
+	color: #ffbc52;
+}
+
+#produits article:first-child h2 {
+	color: #eb403b;
+}
+
+
+.w50 {
+	width: 46%;
+	margin: 4rem 0;
+}
+
+.w50 p {
+	width: 80%;
+	text-align: center;
+	font-size: 1.5rem;
+	margin: 1rem auto 0 auto;
+	line-height: 2rem;
+}
+
+
+#top img, .w50 img {
+	max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* 	------------------------------------ SECTION HISTOIRE 
+--------------------------------------------------------- */
+
+#histoire {
+	width: 95%;
+	margin: 0 auto;
+	background-color: #1f1f1f;
+	padding-bottom: 7.5rem;	
+}
+
+#histoire h2 {
+	font-family: 'Lora', serif;
+	font-size: 7.2rem;
+	text-align: center;
+}
+
+#bg {
+	background-color: rgba(255, 255, 255, .1);
+	padding: 0 2rem;
+}
+
+#histoire ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+#histoire p {
+	width: 63%;
+	margin: 4rem auto 7rem auto;
+	font-size: 1.8rem;
+
+}
+
+/*	------------------------------- SECTION SLIDESHOW
+	-------------------------------------------------- */
+
+section#citations {
+    font: 3rem "Lora", serif;
+    width: 95%;
+	background-color: #1f1f1f;
+	color: #c2332e;
+    margin: 0 auto;
+    height: 36rem;
+    overflow: hidden;
+
+}
+
+#citations cite {
+    font-style: italic;
+}
+
+.slid_1, .slid_2, .slid_3, .slid_4, .slid_5, .slid_6, .slid_7, .slid_8, .slid_9, .slid_10 {
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+}
+
+cite {
+	display:block;
+
+}
+
+q {
+	display: block;
+	padding-top: 17rem;
+	font-weight: 700;
+}
+
+/* 	--------------------------------- FOOTER
+	------------------------------------------ */
+
+footer {
+	height: 7rem;
+	width: 80%;
+	margin: 10rem auto 0 auto;
+	padding-bottom: 6rem;
+	font-size: 1.8rem;
+	color: #8a8a8a;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*	------------- Formulaire Newsletter
+--------------------------------------- */
+
+/*	------------- Network icones
+------------------------------------- */
+
+#footer_form {
+	display: flex;
+	flex-flow: row wrap;
+	width: 55%;
+}
+
+#label {
+	text-transform: uppercase;
+}
+
+#newsletter {
+	width: 75%;	
+}
+
+#network {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+#network a {
+	margin: 0 10px;
+	transition: all .25s ease;
+}
+
+#network a:hover {
+	opacity: 0.7;
+}
+
+#adresse {
+	list-style : none;
+}
+
+#adresse li {
+	margin: 1rem 0;
+}
+
+
+
