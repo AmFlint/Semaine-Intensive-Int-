@@ -1,0 +1,471 @@
+@charset "UTF-8"
+/* --------------------------------------
+------ pré-requis
+-----------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+html {
+    font-size: 62.5%;
+    color: white;
+}
+
+a,
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* --------------------------------------
+------ body
+-----------------------------------------*/
+
+body {
+    background: #1f1f1f;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------------------------------------
+------ header
+-----------------------------------------*/
+
+header {
+    margin-bottom: 20rem;
+    padding-top: 2.5rem;
+    z-index: 1;
+}
+
+header #lien {
+    width: 20%;
+}
+
+.logo {
+    width: 20%;
+    float: left;
+    margin-top: -2rem;
+    margin: -2rem 0 0 2rem;
+}
+
+.logo h2,
+.logo img {
+    float: left;
+}
+
+.logo h2 {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    font-weight: 700;
+}
+
+nav {
+    float: right;
+    width: 60%;
+    font-size: 2rem;
+}
+
+nav a {
+    font-weight: 300;
+    float: right;
+    margin-right: 4rem;
+    font-family: 'Roboto';
+}
+
+nav a:first-child {
+    margin-right: 6.5rem;
+}
+
+.sliding {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.sliding:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 4px;
+    width: 0;
+    transition: 0s ease, background .5s ease;
+}
+
+.sliding:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    height: 4px;
+    width: 0;
+    background: rgba(255, 255, 255, 0.7);
+    transition: .5s ease;
+}
+
+.sliding:hover:before {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transition: .5s ease;
+}
+
+.sliding:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+
+/* --------------------------------------
+------ main
+-----------------------------------------*/
+
+main {
+    overflow: hidden;
+}
+
+
+/* --------------------------------------
+------ section Description
+-----------------------------------------*/
+
+section#description {
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+section#description h2 {
+    position: absolute;
+    top: 6rem;
+    left: 20%;
+    color: #a93332;
+    font-family: 'Gilda Display';
+    font-size: 8rem;
+    letter-spacing: 0.1em;
+}
+
+
+/* ----- mise en forme du titre ----- */
+
+section#description .nos {
+    text-align: center;
+    margin-left: 7rem;
+    opacity: 0.57;
+}
+
+section#description .charcuteries {
+    display: block;
+    margin-top: -6.5rem;
+}
+
+section#description p {
+    width: 55%;
+    margin: 2rem 0 2.5rem 20%;
+    font-size: 1.4rem;
+    font-family: 'Roboto';
+    text-align: right;
+}
+
+
+/* --------------------------------------
+------ section Listing
+-----------------------------------------*/
+
+section#listing {
+    text-align: center; /* pour centrer mes blocs */
+}
+
+.listes {
+    /* Pour mettre l'image en background */
+    background-image: url(../img-content/viande-opaque.png);
+    overflow: hidden;
+    padding: 4%;
+}
+
+.listes ul {
+    width: 30%;
+    display: inline-block; /* pour mettre mes blocs en ligne */
+}
+
+.listes ul h3 {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.listes ul li {
+    list-style-type: none;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+section#listing .clear {
+    max-width: 100%;
+}
+
+
+/* 	--------------------------------- FOOTER
+	------------------------------------------ */
+
+footer {
+    height: 7rem;
+    width: 80%;
+    margin: 10rem auto 0 auto;
+    padding-bottom: 6rem;
+    font-size: 1.8rem;
+    color: #8a8a8a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#google {
+    width: 20%;
+}
+
+
+/*	------------- Formulaire Newsletter
+--------------------------------------- */
+
+#footer_form {
+    display: flex;
+    flex-flow: row wrap;
+    width: 55%;
+}
+
+#label {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#newsletter {
+    width: 75%;
+}
+
+
+/*	------------- Network icones
+------------------------------------- */
+
+#network {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#network a {
+    margin: 0 1rem;
+    transition: all .25s ease;
+}
+
+#network a:hover {
+    opacity: 0.7;
+}
+
+#adresse {
+    list-style: none;
+    font-family: 'Roboto';
+}
+
+#adresse li {
+    margin: 1rem 0;
+}
+
+
+/* ---------------------------------------
+------ media queries 960
+-----------------------------------------*/
+
+@media screen and (max-width: 960px) {
+    /* ----- barre de navigation ----- */
+    header {
+        /* -- repositionner le header (nav + logo) -- */
+        display: flex;
+        justify-content: space-around;
+    }
+    .logo img,
+    nav,
+    nav a {
+        /* changement de méthode : flex */
+        float: none;
+    }
+    .logo {
+        margin-left: 2rem;
+    }
+    nav {
+        /* repositionner les liens dans la nav */
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    nav a {
+        margin-right: auto;
+    }
+    nav a:first-child {
+        /* Supprimer la margin mise en place sur grand écran */
+        margin-right: auto;
+    }
+    nav a:nth-child(2) {
+        border: none;
+    }
+    /* ----- section#description ----- */
+    section#description p {
+        margin: 3rem 0 3rem 20%;
+        font-size: 1.3rem;
+    }
+    /* ----- footer ----- */
+    footer {
+        flex-flow: row wrap;
+        height: auto;
+    }
+    #google {
+        display: none;
+    }
+    /* -- Forcer l'adresse et le tel à passer en dessous -- */
+    #adresse {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_form {
+        width: 60%;
+    }
+    #label {
+        /* -- agrandir la zone email -- */
+        margin-left: 8rem;
+    }
+    #network a {
+        margin: 0 3rem;
+    }
+}
+
+
+/* ---------------------------------------
+------ media queries 768
+-----------------------------------------*/
+
+@media screen and (max-width: 768px) {
+    /* ----- navigation ----- */
+    nav a {
+        font-size: 75%;
+    }
+    /* ----- section#description ----- */
+    section#description .charcuteries {
+        margin-top: -5rem;
+    }
+    section#description h2 {
+        display: inline-block;
+        width: 100%;
+        font-size: 5.4rem;
+        top: 20%;
+    }
+    section#description p {
+        width: 90%;
+        margin: 4rem auto 5% auto;
+        font-size: 1.3rem;
+    }
+    /* ----- section#listing ----- */
+    section#listing ul {
+        margin: 0;
+        padding: 0;
+        width: 40%;
+    }
+    section#listing h3 {
+        font-size: 1.5rem;
+    }
+    section#listing ul li {
+        font-size: 1.3rem;
+    }
+    /* ----- footer ----- */
+    #adresse {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    #network a {
+        margin: 0 1rem;
+    }
+    #label {
+        margin-left: 0;
+    }
+}
+
+/* ---------------------------------------
+------ media queries 480
+-----------------------------------------*/
+
+@media screen and (max-width: 480px) {
+    
+    main {
+        width: auto;
+    }
+    
+    /* ----- barre de navigation ----- */
+    header {
+        /* passage en position relative avec un background noir */
+        text-align: center;
+        padding-top: 0;
+        position: relative;
+        background-color: #1f1f1f;
+        text-transform: uppercase;
+        margin-bottom: 40%;
+    }
+    nav {
+        width: 100%;
+        display: block;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+    }
+    
+    #lien {
+        /* -- Supprimer l'affichage du logo -- */
+        display: none;
+    }
+    
+    /* ----- section#description ----- */
+    section#description h2 {
+        width: 100%;
+        top: 11rem;
+        left: 0;
+        text-align: center;
+    }
+    section#description p {
+        margin-top: 5rem;
+    }
+    
+    /* ----- section#listing ----- */
+    section#listing ul {
+        margin-right: 3%;
+    }
+    section#listing ul li {
+        font-size: 1.2em;
+    }
+    /* ----- footer ----- */
+    footer {
+        flex-flow: column;
+    }
+    #network {
+        margin-top: 3rem;
+    }
+}
