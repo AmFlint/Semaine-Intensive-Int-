@@ -56,50 +56,127 @@ header #lien {
 .logo {
 	width: 20%;
 	float: left;
-	margin-top: -2rem;
+	margin-top: -1rem;
 	margin: -2rem 0 0 2rem;
+	letter-spacing: 2px;
 }
 
 .logo h2, .logo img{
 	float: left;
+
+}
+
+.logo img {
+	width: 17%;
+
 }
 
 .logo h2 {
 	font-size: 2.5rem;
-	margin-top: 4rem;
+	margin-top: 1rem;
 	font-weight: 700;
 }
 
 nav {
 	float : right;
 	width: 70%;
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 nav a {
 	font-weight: 300;
 	float: right;
-	margin-right: 4rem;
-	padding: 1rem 2rem;
+	margin-right: 2rem;
+	padding: 1rem 1rem;
+	letter-spacing: 2px;
 }
 
 nav a:first-child {
-	margin-right: 6.5rem;
+	margin-right: 5.5rem;
 }
 
-nav a:nth-child(2) {
-	border: 2px solid #ffffff;
+
+.sliding {
+
+    display: inline-block;
+
+    position: relative;
+
+    padding-bottom: 3px;
+
 }
 
-nav a:hover {
-	background-color: rgba(255, 255, 255, .7);
-	color: #000;
+.sliding:before {
+
+    content: '';
+
+    display: block;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    height: 3px;
+
+    width: 0;
+
+    transition: 0s ease, background .5s ease;
+
+}
+
+.sliding:after {
+
+    content: '';
+
+    display: block;
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 4px;
+
+    width: 0;
+
+    background: rgba(255,255,255,0.7);
+
+    transition: .5s ease;
+
+}
+
+.sliding:hover:before {
+
+    width: 100%;
+
+    background: rgba(255,255,255,0.7);
+
+    transition: .5s ease;
+
+}
+
+.sliding:hover:after {
+
+    width: 100%;
+
+    background: transparent;
+
+    transition: all 0s ease;
+
 }
 /* 	------------------- SECTION TOP HAUT DE PAGE
 	---------------------------------------------- */
 
 #top {
 	position: relative;
+
+}
+
+.background {
+	height: 50%;
 }
 
 .slogan {
@@ -112,12 +189,14 @@ nav a:hover {
 }
 
 h1 {
-	font-size: 6rem;
+	font-size: 5.6rem;
 	text-transform: uppercase;
+	text-align: center;
+	margin-left: -2rem;
 }
 
 .slogan p {
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	text-align: center;
 }
 
@@ -138,12 +217,23 @@ h1 {
 }
 
 figcaption {
-	text-transform: uppercase;
+	text-transform: none;
 }
 
 .w25 figure img , .w25 figcaption {
 	margin-bottom: 1rem;
+	font-size: 16px;
+
 }
+
+.w25 figure img {
+	width: 32%;
+}
+
+.w25 p {
+	font-size: 139%;
+}
+ 
 
 /* ----------------- SECTION PRODUITS 
 	----------------------------------- */
@@ -158,28 +248,32 @@ figcaption {
 
 #produits h2 {
 	text-align: center;
-	font-family: 'Lora', serif;
-	font-size: 7.2rem;
+	font-family: 'Roboto', serif;
+	font-size: 4.8rem;
 	font-weight: 700;
-	color: #ffbc52;
+	color: white;
+	margin-top: 1%;
+	padding: 15px;
+	letter-spacing: 0.1em;
 }
 
 #produits article:first-child h2 {
-	color: #eb403b;
+	color: white;
 }
 
 
 .w50 {
-	width: 46%;
-	margin: 4rem 0;
+	width: 48%;
+	margin: 2rem 0;
 }
 
 .w50 p {
 	width: 80%;
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	margin: 1rem auto 0 auto;
 	line-height: 2rem;
+	line-height: 1.5;
 }
 
 
@@ -201,28 +295,44 @@ figcaption {
 }
 
 #histoire h2 {
-	font-family: 'Lora', serif;
-	font-size: 7.2rem;
+	font-family: 'Roboto', serif;
+	font-size: 4.4rem;
 	text-align: center;
+	padding: 50px;
 }
 
 #bg {
 	background-color: rgba(255, 255, 255, .1);
-	padding: 0 2rem;
+	font-family: 'Gilda Display';
+	letter-spacing: 0.1em;
+	
 }
 
 #histoire ul {
 	list-style: none;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 #histoire p {
-	width: 63%;
-	margin: 4rem auto 7rem auto;
-	font-size: 1.8rem;
+	width: 70%;
+	margin: 0rem auto 5rem auto;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+#histoire ul li {
+    width: 10%;
+	margin-right: 10rem;
+	padding-top: 10rem;
 
 }
+
+#histoire ul li img {
+	padding: .2rem 0;
+}
+
+
 
 /*	------------------------------- SECTION SLIDESHOW
 	-------------------------------------------------- */
@@ -234,8 +344,6 @@ section#citations {
 	color: #c2332e;
     margin: 0 auto;
     height: 36rem;
-    overflow: hidden;
-
 }
 
 #citations cite {
@@ -248,9 +356,12 @@ section#citations {
 }
 
 .slides {
+	
 	display: flex;
 	flex-flow: column;
 	text-align: center;
+	justify-content: center;
+
 }
 
 cite {
@@ -290,12 +401,19 @@ footer {
 	width: 55%;
 }
 
+#maps {
+	width: 20%;
+}
+
 #label {
+	font-family: 'Roboto';
+	font-weight: bolder;
 	text-transform: uppercase;
 }
 
 #newsletter {
-	width: 75%;	
+	width: 75%;
+	border-radius: 2px;	
 }
 
 #network {
@@ -370,7 +488,7 @@ footer {
 	}
 		/* -- Forcer 2 colonnes -- */
 	#histoire ul li {
-		width: 34%;
+		width: 20%;
 		margin-bottom: 2rem;
 	}
 	
