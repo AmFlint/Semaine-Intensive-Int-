@@ -1,0 +1,305 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  font-family: "Roboto" sans-serif;
+  color: white;
+  font-size: 2.4rem;
+  background-color: #2a2a2a;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+a, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/*  ---------------------------------- HEADER
+------------------------------------------------ */
+header {
+  width: 100%;
+  position: relative;
+  padding-top: 2.5rem;
+  background-color: #282828;
+}
+
+header #lien {
+  width: 20%;
+}
+
+.logo {
+  width: 20%;
+  float: left;
+  margin-top: -2rem;
+  margin: -2rem 0 0 2rem;
+}
+
+.logo h2, .logo img{
+  float: left;
+}
+
+.logo h2 {
+  font-size: 2.5rem;
+  margin-top: 4rem;
+  font-weight: 700;
+}
+
+nav {
+  float : right;
+  width: 70%;
+  font-size: 2rem;
+}
+
+nav a {
+  font-weight: 300;
+  float: right;
+  margin-right: 4rem;
+  padding: 1rem 2rem;
+}
+
+nav a:first-child {
+  margin-right: 6.5rem;
+}
+
+nav a:nth-child(2) {
+  border: 2px solid #ffffff;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, .7);
+  color: #000;
+}
+
+/*  --------- Section COMMON
+----------------------------- */
+
+
+.contact {
+  width: 50%;
+  float: left;
+  padding-top: 5rem;
+}
+
+/*  -------------------------------------- Section Gauche
+--------------------------------------------------- */
+
+.contact-left img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.contact-left {
+  background-color: #2a2a2a;
+  width: 50%;
+  height: 780px;
+  margin-bottom: 8rem;
+  font-size: 1.8rem;
+}
+
+.contact-left h1 {
+  color: #242424;
+  font: 9.5rem "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 9rem;
+  text-transform: uppercase;
+  opacity: 15%;
+  padding-left: -10rem;
+  margin-bottom: 4.5rem;
+}
+
+#nous1 { /* -- décalage du Nous sur la droite -- */ 
+  padding-left: 32rem;
+  font-size: 13rem;
+}
+
+article {
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Gilda Display", serif;
+}
+
+.article1 {
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.article1 p {
+  width: 60%;
+  line-height: 3rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.article2 {
+  margin-bottom: 3.5rem;
+}
+
+.contact-left img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+
+/*  -------------------------------------- Section Droite
+--------------------------------------------------- */
+
+.contact-right {
+  float: left;
+  background-color: #1f1f1f;
+  width: 50%;
+
+}
+
+.contact-right h1 {
+  color: #93322f;
+  font: 12.5rem "Gilda Display", serif;
+  text-align: right;
+  margin: auto 5rem 9rem auto;
+  font-weight: 700;
+  line-height: 8rem;
+}
+
+#nous {
+  color: #752d2b;
+}
+
+/*  ----------- Formulaire
+--------------------------- */
+
+.formulaire {
+  font-family: "Roboto", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.formulaire label {
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+.formulaire input {
+  width: 50%;
+  padding: .8rem;
+  background-color: #2f2f2f;
+  border: none;
+}
+
+input#name {
+  width: 50%;
+  padding: .8rem;
+  margin-bottom: 3rem;
+}
+
+input#email {
+  width: 50%;
+  padding: .8rem;
+  margin-bottom: 4rem; 
+}
+
+textarea {
+  width: 100%;
+  background-color: #2f2f2f;
+  height: 14.5rem;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+input#send {
+  align-self: center;
+  margin-bottom: 3.5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+
+/*  ------------------------------------------- FOOTER
+--------------------------------------------------------- */
+
+
+footer {
+  height: 7rem;
+  width: 80%;
+  margin: 10rem auto 0 auto;
+  padding-bottom: 6rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*  ------------- Formulaire Newsletter
+--------------------------------------- */
+
+/*  ------------- Network icones
+------------------------------------- */
+
+#footer_form {
+  display: flex;
+  flex-flow: row wrap;
+  width: 55%;
+}
+
+#label {
+  text-transform: uppercase;
+}
+
+#newsletter {
+  width: 75%; 
+}
+
+#network {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+#network a {
+  margin: 0 1rem;
+  transition: all .25s ease;
+}
+
+#network a:hover {
+  opacity: 0.7;
+}
+
+#adresse {
+  list-style : none;
+}
+
+#adresse li {
+  margin: 1rem 0;
+}
