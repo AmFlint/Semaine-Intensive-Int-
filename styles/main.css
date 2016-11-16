@@ -216,18 +216,12 @@ h1 {
 	float: left;
 }
 
-figcaption {
-	text-transform: none;
-}
+
 
 .w25 figure img , .w25 figcaption {
 	margin-bottom: 1rem;
 	font-size: 16px;
 
-}
-
-.w25 figure img {
-	width: 32%;
 }
 
 .w25 p {
@@ -261,9 +255,12 @@ figcaption {
 	color: white;
 }
 
+.w50 img {
+	margin: 2rem auto;
+}
 
 .w50 {
-	width: 48%;
+	width: 46%;
 	margin: 2rem 0;
 }
 
@@ -299,13 +296,12 @@ figcaption {
 	font-size: 4.4rem;
 	text-align: center;
 	padding: 50px;
+	font-weight: 300;
 }
 
 #bg {
-	background-color: rgba(255, 255, 255, .1);
-	font-family: 'Gilda Display';
+	font-weight: 700;	
 	letter-spacing: 0.1em;
-	
 }
 
 #histoire ul {
@@ -322,14 +318,14 @@ figcaption {
 }
 
 #histoire ul li {
-    width: 10%;
-	margin-right: 10rem;
+    width: 25%;
 	padding-top: 10rem;
 
 }
 
 #histoire ul li img {
-	padding: .2rem 0;
+	width: auto;
+	margin: 0 auto;
 }
 
 
@@ -401,7 +397,7 @@ footer {
 	width: 55%;
 }
 
-#maps {
+#google {
 	width: 20%;
 }
 
@@ -484,11 +480,10 @@ footer {
 
 	#histoire ul {
 		flex-flow: row wrap;
-		margin-left: 4rem;
 	}
 		/* -- Forcer 2 colonnes -- */
 	#histoire ul li {
-		width: 20%;
+		width: 50%;
 		margin-bottom: 2rem;
 	}
 	
@@ -516,6 +511,10 @@ footer {
 
 	#network a { 
 		margin: 0 3rem;
+	}
+
+	#google {
+		display: none;
 	}
 }
 
@@ -650,6 +649,7 @@ footer {
 
 	.w25 { /* -- 1 colonnes par ligne, 4 lignes */
 		width: 100%;
+		clear: both;
 	}
 
 	/*	--------------- Section Produits
@@ -676,8 +676,7 @@ footer {
 	}
 
 	#histoire ul li { /* -- Repositionner la colonne d'images -- */
-		width: 84%;
-		margin-bottom: 4rem;
+		width: 60%;
 	}
 
 	/*	--------------- Section Citations / Carousel
@@ -686,7 +685,6 @@ footer {
 	#citations { /* Supprimer l'affichage du carousel de citations en 480px -- */
 		display: none;
 	}
-
 }
 
 
