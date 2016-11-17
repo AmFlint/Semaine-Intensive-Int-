@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	color: white;
+}
+
+a, a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+/* ---- header ----*/
+
+header {
+	width: 100%;
+	position: fixed;
+	padding-top: 2.5rem;
+	z-index: 1;
+}
+
+header #lien {
+	width: 20%;
+}
+
+.logo {
+	width: 20%;
+	float: left;
+	margin-top: -2rem;
+	margin: -2rem 0 0 2rem;
+}
+
+.logo h2, .logo img{
+	float: left;
+}
+
+.logo h2 {
+	font-size: 2.5rem;
+	margin-top: 4rem;
+	font-weight: 700;
+}
+
+nav {
+	float : right;
+	width: 70%;
+	font-size: 2rem;
+}
+
+nav a {
+	font-weight: 300;
+	float: right;
+	margin-right: 4rem;
+	padding: 1rem 2rem;
+}
+
+nav a:first-child {
+	margin-right: 6.5rem;
+}
+
+nav a:nth-child(2) {
+	border: 2px solid #ffffff;
+}
+
+nav a:hover {
+	background-color: rgba(255, 255, 255, .7);
+	color: #000;
+}
+
+/*----- body ------*/
+
+body {
+    background-color: #2b2b2b;
+}
+
+/*----- main ----*/
+
+main {
+  font-family: "Roboto", sans-serif;
+  background-image: url(../img-content/fromage2.png) no-repeat;
+
+}
+
+h1 {
+  position: absolute;
+  top: 250px;
+  left: 80px;
+  font-size: 72px;
+  font-family: "Gilda display";
+  font-weight: 700;
+  color: #ffbc52;
+}
+
+span {
+  font-size: 76px;
+  font-family: "Gilda diplay";
+  font-weight: 700;
+  color: #a47d41;
+  display: flex;
+  margin-bottom: -120px;
+  margin-left: 40px;
+}
+
+.titre {
+  margin-left: 600px;
+  clear: both;
+}
+
+p {
+  position: absolute;
+  top: 400px;
+  left: 400px;
+  font-family: "roboto";
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  width: 40%;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.5rem;
+  font-family: "roboto";
+  font-weight: bold;
+  margin-top: -25px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+li {
+  font-size: 16px;
+  margin-left: 15px;
+  font-family: roboto;
+  font-weight: 400;
+  color: #ffffff;
+  list-style: none;
+}
+
+.roblochon1 {
+  position: absolute;
+  left: 400px;
+  top: 555px;
+}
+
+.roblochon2 {
+  position: absolute;
+  left: 575px;
+  top: 555px;
+}
+
+.fromage1 {
+  position: absolute;
+  top: 125px;
+  left: -20px;
+  margin-left: -65px;
+  width: 25%;
+  opacity: 0.1;
+}
+
+.fromage2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  opacity: 0.61;
+}
+
+.logo-aop {
+  width: 4%;
+  position: absolute;
+  top: 405px;
+  left: 300px;
+  opacity: 0.5;
+}
