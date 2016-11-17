@@ -1,0 +1,490 @@
+@charset "UTF-8"
+/* --------------------------------------
+------ pré-requis
+-----------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+html {
+    font-size: 62.5%;
+    color: white;
+}
+
+a,
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* --------------------------------------
+------ body
+-----------------------------------------*/
+
+body {
+    background: #1f1f1f;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------------------------------------
+------ header
+-----------------------------------------*/
+
+header {
+    margin-bottom: 20rem;
+    padding-top: 2.5rem;
+    z-index: 1;
+}
+
+header #lien {
+    width: 20%;
+}
+
+.logo {
+    width: 20%;
+    float: left;
+    margin-top: -2rem;
+    margin: -2rem 0 0 2rem;
+}
+
+.logo h2,
+.logo img {
+    float: left;
+}
+
+.logo h2 {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    font-weight: 700;
+}
+
+nav {
+    float: right;
+    width: 60%;
+    font-size: 2rem;
+}
+
+nav a {
+    font-weight: 300;
+    float: right;
+    margin-right: 4rem;
+    padding: 1rem 2rem;
+    font-family: 'Gilda Display';
+}
+
+nav a:first-child {
+    margin-right: 6.5rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, .7);
+    color: #000;
+}
+
+
+/* ---------------------------------------
+------ section main
+-----------------------------------------*/
+
+main .patates {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    z-index: -1;
+}
+
+main .salade {
+    position: absolute;
+    z-index: -1;
+    left: 5rem;
+    bottom: 10%;
+}
+
+
+/* ---------------------------------------
+------ section Accompagnements
+-----------------------------------------*/
+
+section#accompagnements {}
+
+section#accompagnements .container {
+    position: relative;
+}
+
+
+/* ---------------------------------------
+------ section Accompagnements title
+-----------------------------------------*/
+
+section#accompagnements h2 {
+    position: absolute;
+    top: 9rem;
+    left: 20%;
+    color: #1e824c;
+    font-family: 'Gilda Display';
+    font-size: 8rem;
+}
+
+section#accompagnements .nos {
+    margin-left: 4rem;
+    opacity: 0.57;
+}
+
+section#accompagnements .accompagnements {
+    display: block;
+    margin-top: -4.5rem;
+    font-weight: bolder;
+}
+
+
+/* ---------------------------------------
+------ section Accompagnements container
+-----------------------------------------*/
+
+section#accompagnements {
+    padding-bottom: 5%;
+    background: #191919;
+    overflow: hidden;
+    z-index: 2;
+}
+
+section#accompagnements p {
+    width: 85%;
+    margin: 5% auto 0 auto;
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    font-size: 1.6rem;
+}
+
+.container {
+    background: #191919;
+    zz-index: 2;
+}
+
+
+/* ---------------------------------------
+------ section Accompagnements listes
+-----------------------------------------*/
+
+.listing {
+    width: 80%;
+    margin-left: 7%;
+    overflow: hidden;
+}
+
+.listing ul {
+    width: 30%;
+    color: #fff;
+    float: left;
+}
+
+.listing ul h3 {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.listing ul li {
+    list-style-type: none;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    font-size: 1.8rem;
+}
+
+/*  ------------------------------------------- FOOTER
+--------------------------------------------------------- */
+
+
+footer {
+  height: 7rem;
+  width: 80%;
+  margin: 10rem auto 0 auto;
+  padding-bottom: 6rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#google {
+  width: 20%;
+}
+
+/*  ------------- Formulaire Newsletter
+--------------------------------------- */
+
+#footer_form {
+  display: flex;
+  flex-flow: row wrap;
+  width: 55%;
+}
+
+#label {
+  text-transform: uppercase;
+}
+
+#newsletter {
+  width: 75%; 
+}
+
+/*  ------------- Network icones
+------------------------------------- */
+
+
+#network {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+#network a {
+  margin: 0 1rem;
+  transition: all .25s ease;
+}
+
+#network a:hover {
+  opacity: 0.7;
+}
+
+#adresse {
+  list-style : none;
+}
+
+#adresse li {
+  margin: 1rem 0;
+}
+
+/* ---------------------------------------
+------ media queries 960
+-----------------------------------------*/
+
+@media screen and (max-width: 960px) {
+    
+    main .salade {
+        bottom: 15%;
+    }
+    
+    /* ----- barre de navigation ----- */
+    
+    
+    header {
+        /* -- repositionner le header (nav + logo) -- */
+        display: flex;
+        justify-content: space-around;
+    }
+    .logo img,
+    nav,
+    nav a {
+        /* changement de méthode : flex */
+        float: none;
+    }
+    .logo {
+        margin-left: 2rem;
+    }
+    nav {
+        /* repositionner les liens dans la nav */
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    nav a {
+        margin-right: auto;
+    }
+    nav a:first-child {
+        /* Supprimer la margin mise en place sur grand écran */
+        margin-right: auto;
+    }
+    nav a:nth-child(2) {
+        border: none;
+    }
+    
+    /* ----- section#accompagnement ----- */
+    
+    section#accompagnements h2 {
+        position: absolute;
+        top: 9rem;
+        left: 10%;
+        font-size: 8rem;
+    }
+    
+    section#accompagnements p {
+        font-size: 1.5rem,   
+    }
+     /*  --------------- Footer
+  ----------------------------- */
+
+  footer {
+    flex-flow: row wrap;
+    height: auto;
+  }
+    /* -- Forcer l'adresse et le tel à passer en dessous -- */
+  #adresse {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer_form {
+    width: 60%;
+  }
+
+  #label { /* -- agrandir la zone email -- */
+    margin-left: 8rem;
+  }
+
+  #network a { 
+    margin: 0 3rem;
+  }
+
+  #google {
+    display: none;
+  }
+}
+
+
+/* ---------------------------------------
+------ media queries 768
+-----------------------------------------*/
+
+@media screen and (max-width: 768px) {
+    
+
+    
+    /* ----- navigation ----- */
+    
+    nav a {
+        font-size: 75%;
+    }
+    
+    /* ----- section#accompagnement ----- */
+    
+    section#accompagnements h2 {
+        position: absolute;
+        width: 100%;
+        top: 15rem;
+        left: 5%;
+        font-size: 4.8rem;
+    }
+    
+    section#accompagnements .accompagnements {
+        margin-top: -3.5rem;
+    }
+    
+    section#accompagnements p {
+        font-size: 1.5rem;
+    }
+    
+    .listing ul h3 {
+        font-size: 1.8rem;
+    }
+    
+    .listing ul li {
+        font-size: 1.4rem;
+    }
+
+    /*  --------------- Footer
+  ----------------------------- */
+
+  /* -- Forcer l'adresse et le tel à passer en dessous -- */
+  #adresse {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  #label { /* -- agrandir la zone email -- */
+    margin-left: 0;
+  }
+
+  #network a { 
+    margin: 0 1rem;
+  } 
+}
+
+/* ---------------------------------------
+------ media queries 480
+-----------------------------------------*/
+
+@media screen and (max-width: 480px) {
+    main .patates {
+        width: 60%;
+        top: 20%; 
+    }
+    
+    main .salade {
+        display: none;
+    }
+    
+    /* ----- barre de navigation ----- */
+    
+    header { /* passage en position relative avec un background noir */
+        
+		text-align: center;
+		padding-top: 0;
+		position: relative;
+		background-color: #1f1f1f;
+		text-transform: uppercase;
+        margin-bottom: 40%;
+	}
+
+	nav {
+		width: 100%;
+		display: block;
+	}
+
+	nav a {
+		width: 100%;
+		display: block;
+	}
+
+	#lien { /* -- Supprimer l'affichage du logo -- */
+		display: none;	
+    }
+
+
+    /* ----- section#accompagnement ----- */
+    
+    section#accompagnements h2 {
+        font-size: 5.5rem;
+        top: 15rem;
+        left: 0;
+    }
+    
+    .accompagnements {
+        margin-top: -2.4rem;
+        font-size: 5rem;
+    }
+    
+    section#accompagnements p {
+        padding-top: 3%;
+        font-size: 1.3rem;
+    }
+    
+    .listing ul {
+        width: 100%;
+    }
+
+    footer {
+        margin: 1rem 2rem 5rem 2rem;
+        padding-bottom: 0;
+    }   
+}
