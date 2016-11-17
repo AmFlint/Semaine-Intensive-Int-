@@ -8,14 +8,9 @@
     padding: 0;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {}
 
-}
-
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
     content: " ";
     display: table;
 }
@@ -29,8 +24,7 @@ html {
     color: white;
 }
 
-a,
-a:visited {
+a, a:visited {
     color: #fff;
     text-decoration: none;
 }
@@ -47,12 +41,12 @@ body {
 }
 
 
-/* --------------------------------------
------- header
------------------------------------------*/
+/*	-------------------- HEADER
+	------------------------------ */
 
 header {
-    margin-bottom: 20rem;
+    width: 100%;
+    position: fixed;
     padding-top: 2.5rem;
     z-index: 1;
 }
@@ -64,42 +58,47 @@ header #lien {
 .logo {
     width: 20%;
     float: left;
-    margin-top: -2rem;
+    margin-top: -1rem;
     margin: -2rem 0 0 2rem;
+    letter-spacing: 2px;
 }
 
-.logo h2,
-.logo img {
+.logo h2, .logo img {
     float: left;
 }
 
 .logo h2 {
     font-size: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-weight: 700;
 }
 
 nav {
     float: right;
-    width: 60%;
-    font-size: 2rem;
+    width: 70%;
+    font-size: 1.8rem;
 }
 
 nav a {
     font-weight: 300;
     float: right;
-    margin-right: 4rem;
-    font-family: 'Roboto';
+    margin-right: 2rem;
+    padding: 1rem 1rem;
+    letter-spacing: 2px;
 }
 
 nav a:first-child {
-    margin-right: 6.5rem;
+    margin-right: 5.5rem;
+}
+
+.disp480 {
+    display: none;
 }
 
 .sliding {
     display: inline-block;
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 14px;
 }
 
 .sliding:before {
@@ -107,8 +106,8 @@ nav a:first-child {
     display: block;
     position: absolute;
     left: 0;
-    bottom: -5px;
-    height: 4px;
+    bottom: 0;
+    height: 3px;
     width: 0;
     transition: 0s ease, background .5s ease;
 }
@@ -118,7 +117,7 @@ nav a:first-child {
     display: block;
     position: absolute;
     right: 0;
-    bottom: -5px;
+    bottom: 0;
     height: 4px;
     width: 0;
     background: rgba(255, 255, 255, 0.7);
@@ -138,6 +137,58 @@ nav a:first-child {
 }
 
 
+/*  ------------------------- DROPDOWN MENU ----------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background: #2a2a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all .25s ease;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    margin-right: 0;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* --------------------------------------
 ------ main
 -----------------------------------------*/
@@ -154,16 +205,16 @@ main {
 section#description {
     overflow: hidden;
     line-height: 1.5;
+    margin-top: 5rem;
 }
 
 section#description h2 {
-    position: absolute;
-    top: 6rem;
-    left: 20%;
     color: #a93332;
     font-family: 'Gilda Display';
     font-size: 8rem;
     letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 6rem;
 }
 
 
@@ -177,15 +228,16 @@ section#description .nos {
 
 section#description .charcuteries {
     display: block;
-    margin-top: -6.5rem;
 }
 
 section#description p {
-    width: 55%;
-    margin: 2rem 0 2.5rem 20%;
-    font-size: 1.4rem;
+    width: 85%;
+    margin: 0 auto 2% auto;
+    color: #fff;
     font-family: 'Roboto';
-    text-align: right;
+    font-weight: lighter;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 
@@ -194,8 +246,8 @@ section#description p {
 -----------------------------------------*/
 
 section#listing {
-    text-align: center; /* pour centrer mes blocs */
-    position: relative;
+    text-align: center;
+    /* pour centrer mes blocs */
 }
 
 .clear {
@@ -210,17 +262,17 @@ section#listing {
     overflow: hidden;
     padding: 2rem;
     width: 100%;
-    position: absolute;
     top: 1%;
     left: 0%;
     display: flex;
     justify-content: center;
 }
 
-
 .listes ul {
     width: 27%;
-    display: block; /* pour mettre mes blocs en ligne */
+    display: flex;
+    flex-direction: column;
+    /* pour mettre mes blocs en ligne */
 }
 
 .listes ul:last-child {
@@ -231,7 +283,7 @@ section#listing {
     font-family: 'Roboto';
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 150%;
 }
 
@@ -239,9 +291,8 @@ section#listing {
     list-style-type: none;
     font-family: 'Roboto';
     font-weight: lighter;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
-
 
 
 /* 	--------------------------------- FOOTER
@@ -324,9 +375,7 @@ footer {
         display: flex;
         justify-content: space-around;
     }
-    .logo img,
-    nav,
-    nav a {
+    .logo img, nav, nav a {
         /* changement de méthode : flex */
         float: none;
     }
@@ -358,6 +407,8 @@ footer {
     footer {
         flex-flow: row wrap;
         height: auto;
+        margin: 8rem auto 0 auto;
+        padding-bottom: 3rem;
     }
     #google {
         display: none;
@@ -390,15 +441,51 @@ footer {
     nav a {
         font-size: 75%;
     }
+    .dropbtn {
+        display: none;
+    }
+    .disp480 {
+        display: block;
+        color: #fff;
+    }
+    nav {
+        width: 100%;
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    header {
+        /* passage en position relative avec un background noir */
+        text-align: center;
+        padding-top: 0;
+        position: relative; 
+        background-color: #1f1f1f;
+        text-transform: uppercase;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+        font-size: 1.2rem;
+    }
+    #lien {
+        display: none;
+    }
     /* ----- section#description ----- */
     section#description .charcuteries {
         margin-top: -5rem;
     }
+
+    section#description {
+        margin-top: -3rem;
+    }
+
     section#description h2 {
         display: inline-block;
         width: 100%;
         font-size: 5.4rem;
-        top: 20%;
+        line-height: 170%;
     }
     section#description p {
         width: 90%;
@@ -418,6 +505,11 @@ footer {
         font-size: 1.3rem;
     }
     /* ----- footer ----- */
+
+    footer {
+        margin: 5rem auto 0 auto !important;
+    }
+
     #adresse {
         flex-direction: column;
         text-align: center;
@@ -431,16 +523,15 @@ footer {
     }
 }
 
+
 /* ---------------------------------------
 ------ media queries 480
 -----------------------------------------*/
 
 @media screen and (max-width: 480px) {
-    
     main {
         width: auto;
     }
-    
     /* ----- barre de navigation ----- */
     header {
         /* passage en position relative avec un background noir */
@@ -449,7 +540,8 @@ footer {
         position: relative;
         background-color: #1f1f1f;
         text-transform: uppercase;
-        margin-bottom: 40%;
+
+        padding-bottom: 0;
     }
     nav {
         width: 100%;
@@ -459,13 +551,17 @@ footer {
         width: 100%;
         display: block;
     }
-    
     #lien {
         /* -- Supprimer l'affichage du logo -- */
         display: none;
     }
-    
     /* ----- section#description ----- */
+
+    section#description {
+        margin-bottom: 5rem;
+    }
+    
+
     section#description h2 {
         width: 100%;
         top: 11rem;
@@ -473,15 +569,15 @@ footer {
         text-align: center;
     }
     section#description p {
-        margin-top: 5rem;
+        margin-top: -2rem;
     }
-    
     /* ----- section#listing ----- */
+
+
     .listes {
         margin-left: -3rem;
         margin-top: -3rem;
     }
-
     section#listing ul li {
         font-size: 1.2em;
     }
@@ -489,7 +585,6 @@ footer {
     footer {
         flex-flow: column;
     }
-    
     #network {
         margin-top: 3rem;
     }
