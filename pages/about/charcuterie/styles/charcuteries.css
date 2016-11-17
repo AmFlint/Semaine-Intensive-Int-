@@ -8,6 +8,12 @@
     padding: 0;
 }
 
+*,
+*:before,
+*:after {
+
+}
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -189,18 +195,36 @@ section#description p {
 
 section#listing {
     text-align: center; /* pour centrer mes blocs */
+    position: relative;
+}
+
+.clear {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 .listes {
     /* Pour mettre l'image en background */
-    background-image: url(../img-content/viande-opaque.png);
     overflow: hidden;
-    padding: 4%;
+    padding: 2rem;
+    width: 100%;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
 }
 
+
 .listes ul {
-    width: 30%;
-    display: inline-block; /* pour mettre mes blocs en ligne */
+    width: 27%;
+    display: block; /* pour mettre mes blocs en ligne */
+}
+
+.listes ul:last-child {
+    margin-right: 3rem;
 }
 
 .listes ul h3 {
@@ -208,6 +232,7 @@ section#listing {
     font-weight: bolder;
     text-transform: uppercase;
     font-size: 1.6rem;
+    line-height: 150%;
 }
 
 .listes ul li {
@@ -217,9 +242,6 @@ section#listing {
     font-size: 1.5rem;
 }
 
-section#listing .clear {
-    max-width: 100%;
-}
 
 
 /* 	--------------------------------- FOOTER
@@ -455,9 +477,11 @@ footer {
     }
     
     /* ----- section#listing ----- */
-    section#listing ul {
-        margin-right: 3%;
+    .listes {
+        margin-left: -3rem;
+        margin-top: -3rem;
     }
+
     section#listing ul li {
         font-size: 1.2em;
     }
