@@ -1,0 +1,249 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    color: white;
+}
+
+body {
+    font-family: 'Lora', sans-serif;
+}
+
+main {
+    background-color: #2b2b2b;
+}
+
+.content {
+    background-color: #1f1f1;
+    width: 65%;
+    float: right;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*	-------------------- HEADER
+	------------------------------ */
+
+header {
+    width: 100%;
+    position: fixed;
+    padding-top: 2.5rem;
+    z-index: 1;
+}
+
+header #lien {
+    width: 20%;
+}
+
+.logo {
+    width: 20%;
+    float: left;
+    margin-top: -2rem;
+    margin: -2rem 0 0 2rem;
+}
+
+.logo h2, .logo img {
+    float: left;
+}
+
+.logo h2 {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    font-weight: 700;
+}
+
+nav {
+    float: right;
+    width: 70%;
+    font-size: 2rem;
+}
+
+nav a {
+    font-weight: 300;
+    float: right;
+    margin-right: 4rem;
+    padding: 1rem 2rem;
+}
+
+nav a:first-child {
+    margin-right: 6.5rem;
+}
+
+nav a:nth-child(2) {
+    border: 2px solid #ffffff;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, .7);
+    color: #000;
+}
+
+
+/* 	--------------------------------- SECTIONS
+	------------------------------------------ */
+
+section {}
+
+#histoire {
+    margin: 0 auto 0 auto;
+    background-color: #1f1f1f;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+#histoire img {
+    margin-left: -25rem;
+}
+
+#chef {
+    margin: 0 auto 0 auto;
+    background-color: #1f1f1f;
+    padding-bottom: 11rem;
+    margin-bottom: 10rem;
+}
+
+#chef img {
+    margin-left: -32.5rem;
+}
+
+article {
+    display: flex;
+    justify-content: space-around;
+}
+
+.w50 {
+    width: 100%;
+    margin-right: 0;
+}
+
+.w50 h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: normal;
+}
+
+#histoire .flex h2 {
+    margin-left: 3.2rem;
+    margin-top: 2.3rem;
+}
+
+#chef .flex2 h2 {
+    margin-left: 14.8rem;
+    margin-top: 6.7rem;
+}
+
+#histoire .flex p {
+    margin-left: 8rem;
+    margin-top: 5.2rem;
+}
+
+#chef .flex2 p {
+    margin-left: 11.2rem;
+    margin-top: 3rem;
+}
+
+.w50 p {
+    width: 50%;
+    text-align: right;
+    font-size: 2rem;
+}
+
+#histoire .flex h2 span {
+    margin-left: 8.3rem;
+}
+
+#histoire .flex h2 strong {
+    font-family: 'Roboto Bold', sans-serif;
+}
+
+#chef .flex2 h2 strong {
+    margin-left: 2.5rem;
+    font-family: 'Roboto Bold', sans-serif;
+}
+
+
+/* 	--------------------------------- FOOTER
+	------------------------------------------ */
+
+footer {
+    height: 7rem;
+    width: 80%;
+    margin: 10rem auto 0 auto;
+    padding-bottom: 6rem;
+    font-size: 1.8rem;
+    color: #8a8a8a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*	------------- Formulaire Newsletter
+--------------------------------------- */
+
+
+/*	------------- Network icones
+------------------------------------- */
+
+#footer_form {
+    display: flex;
+    flex-flow: row wrap;
+    width: 55%;
+}
+
+#label {
+    text-transform: uppercase;
+}
+
+#newsletter {
+    width: 75%;
+}
+
+#network {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#network a {
+    margin: 0 1rem;
+    transition: all .25s ease;
+}
+
+#network a:hover {
+    opacity: 0.7;
+}
+
+#adresse {
+    list-style: none;
+}
+
+#adresse li {
+    margin: 1rem 0;
+}
+
+
+}
