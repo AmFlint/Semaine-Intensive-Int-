@@ -194,6 +194,13 @@ article img {
     display: block;
 }
 
+.w25 img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
 /*	----------------- Section Nourriture ---- */
 
 .nourriture {
@@ -210,7 +217,7 @@ article img {
 	margin-bottom: 8rem;
 }
 
-figcaption, .pay, .w50 p {
+figcaption, .pay, .col p {
 	width: 85%;
 	margin: 0 auto;
 }
@@ -227,7 +234,6 @@ h3 {
 .w50 p {
 	font-size: 1.6rem;
 	margin-bottom: 2rem;
-	text-transform: uppercase;
   line-height: 150%;
 }
 
@@ -249,7 +255,7 @@ h3 {
 	text-align: center;	
 	padding: 1.5rem 0;
 	border-radius: .3rem;
-	font-size: 1.3rem;
+	font-size: 1.6rem;
 }
 
 /*	----------------- Section Appareil 
@@ -257,7 +263,7 @@ h3 {
 
 .appareil {
   width: 80%;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 2rem auto;
   background-color: 
 }
 
@@ -270,7 +276,7 @@ h3 {
   width: 60%;
   margin: 0 auto 3rem auto;
   border: .5rem solid #ffffff;
-  padding-bottom: .5rem;
+  padding: 1rem;
 }
 
 .appareil article {
@@ -317,6 +323,57 @@ h3 {
 
 .appareil figure {
   flex: 2;
+}
+
+/*  ------------------------------------------ SECTION VIN
+----------------------------------------------------------- */
+
+.vin {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nosvins {
+  color: #f6f6f6;
+  text-align: center;
+  margin: 8% auto 5% auto;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.col {
+  background-color: #f6f6f6;
+}
+
+.w25 {
+  width: 23%;
+}
+
+.w25 h4 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 10% auto;
+}
+
+.w25 p {
+  font-size: 1.5rem;
+  margin: 15% auto;
+}
+
+.w25 img {
+  margin: 10% auto;
+}
+
+.pay2 {
+  font-size: 2rem;
+  align-items: center;
+}
+
+.pay2 a {
+  font-size: 1.3rem;
 }
 
 
@@ -415,6 +472,17 @@ footer {
     text-align: center;
   }
 
+  /*  -------------- Section VINS ------- */
+
+  .vin {
+    flex-flow: row wrap;
+  }
+
+  .w25 {
+    width: 48%;
+    margin-bottom: 5%;
+  }
+
   /*  --------------- Footer
   ----------------------------- */
 
@@ -446,6 +514,16 @@ footer {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .vin {
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  .w25 {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 768px) {
   
