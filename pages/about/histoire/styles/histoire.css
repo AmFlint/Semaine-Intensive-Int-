@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Gilda Display', serif;
+    font-family: 'Roboto', serif;
 }
 
 main {
@@ -59,8 +59,9 @@ header #lien {
 .logo {
     width: 20%;
     float: left;
-    margin-top: -2rem;
+    margin-top: -1rem;
     margin: -2rem 0 0 2rem;
+    letter-spacing: 2px;
 }
 
 .logo h2, .logo img {
@@ -69,34 +70,175 @@ header #lien {
 
 .logo h2 {
     font-size: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-weight: 700;
 }
 
 nav {
     float: right;
     width: 70%;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 nav a {
     font-weight: 300;
     float: right;
-    margin-right: 4rem;
-    padding: 1rem 2rem;
+    margin-right: 2rem;
+    padding: 1rem 1rem;
+    letter-spacing: 2px;
 }
 
 nav a:first-child {
-    margin-right: 6.5rem;
+    margin-right: 5.5rem;
 }
 
-nav a:nth-child(2) {
-    border: 2px solid #ffffff;
+.disp480 {
+    display: none;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, .7);
-    color: #000;
+.sliding {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.sliding:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: 0s ease, background .5s ease;
+}
+
+.sliding:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background: rgba(255, 255, 255, 0.7);
+    transition: .5s ease;
+}
+
+.sliding:hover:before {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transition: .5s ease;
+}
+
+.sliding:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+
+/*  ------------------------- DROPDOWN MENU ----------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background: #2a2a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all .25s ease;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    margin-right: 0;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*  ------------------------- DROPDOWN MENU ----------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background: #2a2a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all .25s ease;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    margin-right: 0;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -252,198 +394,183 @@ footer {
     margin: 1rem 0;
 }
 
+
 /*  --------------------------------------------------- Media Queries
 ------------------------------------------------------------------- */
 
-@media screen and (max-width: 1280px) {
-    
+@media screen and (max-width: 1440px) {
     #chef img {
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    /*    ------------- Section Histoire ------ */
+    .content {
+        width: 85%;
+        float: none;
+        margin: 0 auto;
+    }
+    .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #histoire img, #chef img {
+        margin-left: 0;
+    }
+    #chef img {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        width: auto;
+    }
+    /*  ---------------- Header / faire disparaître le titre
+  ------------------------------ */
+    header h2 {
+        display: none;
+    }
+    /*  --------------- Footer
+  ----------------------------- */
+    footer {
+        flex-flow: row wrap;
+        height: auto;
+    }
+    /* -- Forcer l'adresse et le tel à passer en dessous -- */
+    #adresse {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_form {
         width: 60%;
     }
-
-}
-@media screen and (max-width: 1040px) {
-    
-    /*    ------------- Section Histoire ------ */
-  .content {
-    width: 85%;
-    float: none;
-    margin: 0 auto;
-  }
-
-  .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  #histoire img, #chef img {
-    margin-left: 0;
-  }
-
-  #chef img {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 960px) {
-
-  main {
-    width: auto;
-  }
-
-  /*  ---------------- Header / faire disparaître le titre
-  ------------------------------ */
-
-  header h2 {
-    display: none;
-  }
-
-  /*  --------------- Footer
-  ----------------------------- */
-
-  footer {
-    flex-flow: row wrap;
-    height: auto;
-  }
-    /* -- Forcer l'adresse et le tel à passer en dessous -- */
-  #adresse {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .footer_form {
-    width: 60%;
-  }
-
-  #label { /* -- agrandir la zone email -- */
-    margin-left: 8rem;
-  }
-
-  #network a { 
-    margin: 0 3rem;
-  }
-
-  #google {
-    display: none;
-  }
+    #label {
+        /* -- agrandir la zone email -- */
+        margin-left: 8rem;
+    }
+    #network a {
+        margin: 0 3rem;
+    }
+    #google {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  
-  /*  ------------ HEADER
+    /*  ------------ HEADER
   ----------------------- */
-  
-  header { /* -- repositionner le header (nav + logo) -- */
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .logo img, nav, nav a { /* changement de méthode : flex */
-    float: none;
-  }
-  
-  .logo {
-    margin-left: 2rem;
-  }
-
-  nav { /* repositionner les liens dans la nav */
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  nav a {
-    margin-right: auto;
-  }
-
-  nav a:first-child { /* Supprimer la margin mise en place sur grand écran */
-    margin-right: auto;
-  }
-
-  nav a:nth-child(2) {
-    border: none;
-  }
-
-  /*  ---------- FOOTER -- */
-
-  #adresse {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  #network a {
-    margin: 0 1rem;
-  }
-
-  #label {
-    margin-left: 0;
-  }
+    /* ----- navigation ----- */
+    nav a {
+        font-size: 75%;
+    }
+    nav a:first-child {
+        margin-right: 0;
+    }
+    header h2 {
+        display: none;
+    }
+    .dropbtn {
+        display: none;
+    }
+    .disp480 {
+        display: block;
+        color: #fff;
+    }
+    nav {
+        width: 100%;
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    header {
+        /* passage en position relative avec un background noir */
+        text-align: center;
+        padding-top: 0;
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+        background-color: #1f1f1f;
+        text-transform: uppercase;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    #lien {
+        display: none;
+    }
+    /*  -- HISTOIRE -- */
+    #histoire {
+        padding-top: 10rem;
+    }
+    /*  ---------- FOOTER -- */
+    #adresse {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    #network a {
+        margin: 0 1rem;
+    }
+    #label {
+        margin-left: 0;
+    }
 }
 
-@media screen and (max-width: 600px) {
-  
-  }
-
+@media screen and (max-width: 600px) {}
 
 @media screen and (max-width: 480px) {
-
-  /*  ----------- HEADER
+    /*  ----------- HEADER
   --------------------------- */
-  
-  header { /* passage en position relative avec un background noir */
-    text-align: center;
-    padding-top: 0;
-    position: relative;
-    background-color: #1f1f1f;
-    text-transform: uppercase;
-  }
-
-  nav {
-
-    width: 100%;
-    display: block;
-  }
-
-  nav a {
-    width: 100%;
-    display: block;
-  }
-
-  #lien { /* -- Supprimer l'affichage du logo -- */
-    display: none;  
-  }
-  /*    -- Section Histoire -- */
-
-  #chef img {
-    width: 85%;
-  }
-
-  #chef .flex2 h2 {
-    margin-left: 0;
-    text-align: center;
-    font-size: 2.5rem;
-  }
-
-  #chef .flex2 p {
-    margin: 3rem auto 0 auto;
-    text-align: left;
-  }
-
-  .flex {
-    margin: 5.2rem auto;
-    text-align: left;
-  }
-
-  /*    -- FOOTER -- */
-  
-  footer {
-    margin: 10rem 2rem;
-    padding-bottom: 0;
-  }
+    header {
+        /* passage en position relative avec un background noir */
+        text-align: center;
+        padding-top: 0;
+        position: relative;
+        background-color: #1f1f1f;
+        text-transform: uppercase;
+    }
+    nav {
+        width: 100%;
+        display: block;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+    }
+    #lien {
+        /* -- Supprimer l'affichage du logo -- */
+        display: none;
+    }
+    /*    -- Section Histoire -- */
+    #chef img {
+        width: 85%;
+    }
+    #chef .flex2 h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    #chef .flex2 p {
+        margin: 3rem auto 0 auto;
+        text-align: left;
+    }
+    .flex {
+        margin: 5.2rem auto;
+        text-align: left;
+    }
+    /*    -- FOOTER -- */
+    footer {
+        margin: 10rem 2rem;
+        padding-bottom: 0;
+    }
 }
-
-
-

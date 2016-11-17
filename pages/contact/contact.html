@@ -1,69 +1,92 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Contact</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <link rel="stylesheet" href="styles/contact.css" type="text/css" >
-	    <link href="https://fonts.googleapis.com/css?family=Gilda+Display|Roboto:300,400,700" rel="stylesheet">
-	</head>
-	<body>
-		<main class="clearfix">
-			<header class="clearfix">    <!-- Navigation et logo -->
-				<a href="index.html" id="lien">
-					<div class="logo">
-						<img src="img-content/logo.png" alt="logo" >
-						<h2>afondre</h2>
-					</div>
-				</a>
-				<nav class="clearfix">
-					<a href="" class="sliding">Contact</a>
-					<a href="" class="sliding">La carte</a>
-					<a href="" class="sliding">À propos</a>
-				</nav>
-			</header>
-			<div class="content">
-				<section class="contact contact-left">
-					<h1><span id="contactez">Contactez</span></br><span id="nous1">nous</span></h1>
-					<article class="article1">
-						<h2>Retrouvez nous au :</h2>
-						<p>36 Rue des pyramides 75001 Paris</p>
-					</article>
-					<article class="article2">
-						<h2>Réservation obligatoire au :</h2>
-						<p>01 39 67 59 32</p>
-					</article>
-					<img src="img-content/maps.png" alt="maps">
-				</section>
-				<section class="contact contact-right">
-					<h1>Écrivez</br><span id="nous">nous</span></h1>
-						<form class="formulaire">
-							<label for="name">Votre nom</label>
-							<input type="text" name="name" id="name" placeholder="Exemple : Jean Lafondue">
-							<label for="email">Votre e-mail</label>
-							<input type="text" name="email" id="email" placeholder="Exemple : xyz@yahoo.com">
-							<label for="message">Votre message</label>
-							<textarea type="text" name="message" id="message" placeholder="Tapez votre message ici..."></textarea>
-							<input type="submit" name="send" id="send" value="Envoyer !">
-						</form>
-				</section>
-			</div>
-			<footer>
-		    	<form class="footer_form">
-		    		<label for="newsletter" id="label">Notre Newsletter</br></label>
-		    		<input type="email" id="newsletter" name="email" placeholder="Entrez votre email">
-		    		<input type="button" value="ok !" id="ok">
-		    	</form>
-			    <div id="network">
-					<a href="#"><img src="img-content/facebook.png" width="35" height="35"></a>
-					<a href="#"><img src="img-content/twitter.png" width="35" height="35"></a>
-					<a href="#"><img src="img-content/instagram.png" width="35" height="35"></a>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img-layout/logo.ico" />
+	<title>Afondre: Contact</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/contact.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Gilda+Display|Roboto:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+	<main class="clearfix">
+		<header class="clearfix">
+			<!-- Navigation et logo -->
+			<a href="../../index.html" id="lien">
+				<div class="logo">
+					<img src="img-content/logo.svg" alt="logo" width="64px" height="64px">
+					<h2>&nbsp;afondre</h2>
 				</div>
-				<ul id="adresse">
-					<li>36 Rue des Pyramides, 75001 Paris</li>
-					<li>Téléphone : 01 39 67 59 32</li>
+			</a>
+			<nav class="clearfix">
+				<ul>
+					<li><a href="../../index.html" class="disp480">Accueil</a></li>
+					<li>
+						<a href="#" class="sliding">Contact</a>
+					</li>
+					<li>
+						<a href="../carte/carte.html" class="sliding">La carte</a>
+					</li>
+					<li><a href="../about/histoire/histoire.html" class="disp480">Histoire</a></li>
+					<li><a href="../about/fromages/fromage.html" class="disp480">Fromages</a></li>
+					<li><a href="../about/charcuterie/charcuterie.html" class="disp480">Charcuterie</a></li>
+					<li><a href="../about/accompagnements/accompagnements.html" class="disp480">Accompagnements</a></li>
+					<li class="dropdown"><a href="" class="dropbtn sliding">À propos</a>
+						<div class="dropdown-content">
+							<a href="../about/histoire/histoire.html">Histoire</a>
+							<a href="../about/fromages/fromage.html">Fromages</a>
+							<a href="../about/charcuterie/charcuterie.html">Charcuteries</a>
+							<a href="../about/accompagnements/accompagnements.html">Accompagnements</a>
+						</div>
+					</li>
 				</ul>
-		    </footer>
-		</main>
-	</body>
+			</nav>
+		</header>
+		<div class="content">
+			<section class="contact contact-left">
+				<h1><span id="contactez">Contactez</span></br><span id="nous1">nous</span></h1>
+				<article class="article1">
+					<h2>Retrouvez nous au :</h2>
+					<p>36 Rue des pyramides 75001 Paris</p>
+				</article>
+				<article class="article2">
+					<h2>Réservation obligatoire au :</h2>
+					<p>01 39 67 59 32</p>
+				</article>
+				<img src="img-content/maps.png" alt="maps">
+			</section>
+			<section class="contact contact-right">
+				<h1>Écrivez</br><span id="nous">nous</span></h1>
+				<form class="formulaire">
+					<label for="name">Votre nom</label>
+					<input type="text" name="name" id="name" placeholder="Exemple : Jean Lafondue">
+					<label for="email">Votre e-mail</label>
+					<input type="text" name="email" id="email" placeholder="Exemple : xyz@yahoo.com">
+					<label for="message">Votre message</label>
+					<textarea type="text" name="message" id="message" placeholder="Tapez votre message ici..."></textarea>
+					<input type="submit" name="send" id="send" value="Envoyer !">
+				</form>
+			</section>
+		</div>
+		<footer>
+			<form class="footer_form">
+				<label for="newsletter" id="label">Notre Newsletter</br></label>
+				<input type="email" id="newsletter" name="email" placeholder="Entrez votre email">
+				<input type="button" value="ok !" id="ok">
+			</form>
+			<div id="network">
+				<a href="#"><img src="img-content/facebook.png" width="35" height="35"></a>
+				<a href="#"><img src="img-content/twitter.png" width="35" height="35"></a>
+				<a href="#"><img src="img-content/instagram.png" width="35" height="35"></a>
+			</div>
+			<ul id="adresse">
+				<li>36 Rue des Pyramides, 75001 Paris</li>
+				<li>Téléphone : 01 39 67 59 32</li>
+			</ul>
+		</footer>
+	</main>
+</body>
+
 </html>

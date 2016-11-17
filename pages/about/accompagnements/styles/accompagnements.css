@@ -8,8 +8,7 @@
     padding: 0;
 }
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
     content: " ";
     display: table;
 }
@@ -23,8 +22,7 @@ html {
     color: white;
 }
 
-a,
-a:visited {
+a, a:visited {
     color: #fff;
     text-decoration: none;
 }
@@ -38,15 +36,16 @@ body {
     background: #1f1f1f;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-/* --------------------------------------
------- header
------------------------------------------*/
+/*	-------------------- HEADER
+	------------------------------ */
 
 header {
-    margin-bottom: 20rem;
+    width: 100%;
+    position: fixed;
     padding-top: 2.5rem;
     z-index: 1;
 }
@@ -58,242 +57,377 @@ header #lien {
 .logo {
     width: 20%;
     float: left;
-    margin-top: -2rem;
+    margin-top: -1rem;
     margin: -2rem 0 0 2rem;
+    letter-spacing: 2px;
 }
 
-.logo h2,
-.logo img {
+.logo h2, .logo img {
     float: left;
 }
 
 .logo h2 {
     font-size: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-weight: 700;
 }
 
 nav {
     float: right;
-    width: 60%;
-    font-size: 2rem;
+    width: 70%;
+    font-size: 1.8rem;
 }
 
 nav a {
     font-weight: 300;
     float: right;
-    margin-right: 4rem;
-    padding: 1rem 2rem;
-    font-family: 'Gilda Display';
+    margin-right: 2rem;
+    padding: 1rem 1rem;
+    letter-spacing: 2px;
 }
 
 nav a:first-child {
-    margin-right: 6.5rem;
+    margin-right: 5.5rem;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, .7);
-    color: #000;
+.disp480 {
+    display: none;
 }
 
+.sliding {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+}
 
-/* ---------------------------------------
------- section main
------------------------------------------*/
+.sliding:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: 0s ease, background .5s ease;
+}
 
-main .patates {
+.sliding:after {
+    content: '';
+    display: block;
     position: absolute;
     right: 0;
-    top: 20%;
-    z-index: -1;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background: rgba(255, 255, 255, 0.7);
+    transition: .5s ease;
 }
 
-main .salade {
-    position: absolute;
-    z-index: -1;
-    left: 5rem;
-    bottom: 10%;
+.sliding:hover:before {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transition: .5s ease;
+}
+
+.sliding:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
 }
 
 
-/* ---------------------------------------
------- section Accompagnements
+/*  ------------------------- DROPDOWN MENU ----------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background: #2a2a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all .25s ease;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    margin-right: 0;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*  ------------------------- DROPDOWN MENU ----------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background: #2a2a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all .25s ease;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    margin-right: 0;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* --------------------------------------
+------ main
 -----------------------------------------*/
 
-section#accompagnements {}
-
-section#accompagnements .container {
-    position: relative;
+main {
+    overflow: hidden;
 }
 
 
-/* ---------------------------------------
------- section Accompagnements title
+/* --------------------------------------
+------ section Description
 -----------------------------------------*/
 
-section#accompagnements h2 {
-    position: absolute;
-    top: 9rem;
-    left: 20%;
-    color: #1e824c;
+section#description {
+    overflow: hidden;
+    line-height: 1.5;
+    margin-top: 5rem;
+}
+
+section#description h2 {
+    color: #a93332;
     font-family: 'Gilda Display';
     font-size: 8rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 6rem;
 }
 
-section#accompagnements .nos {
-    margin-left: 4rem;
-    opacity: 0.57;
+
+/* ----- mise en forme du titre ----- */
+
+section#description .nos {
+    text-align: center;
+    margin-left: 7rem;
+    color: #1e5739;
 }
 
-section#accompagnements .accompagnements {
+section#description .accompagnements {
     display: block;
-    margin-top: -4.5rem;
-    font-weight: bolder;
+    color: #1e824c;
 }
 
-
-/* ---------------------------------------
------- section Accompagnements container
------------------------------------------*/
-
-section#accompagnements {
-    padding-bottom: 5%;
-    background: #191919;
-    overflow: hidden;
-    z-index: 2;
-}
-
-section#accompagnements p {
+section#description p {
     width: 85%;
-    margin: 5% auto 0 auto;
+    margin: 0 auto 2% auto;
     color: #fff;
     font-family: 'Roboto';
     font-weight: lighter;
-    font-size: 1.6rem;
-}
-
-.container {
-    background: #191919;
-    zz-index: 2;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 
-/* ---------------------------------------
------- section Accompagnements listes
+/* --------------------------------------
+------ section Listing
 -----------------------------------------*/
 
-.listing {
-    width: 80%;
-    margin-left: 7%;
+section#listing {
+    text-align: center;
+    /* pour centrer mes blocs */
+}
+
+.clear {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.listes {
+    /* Pour mettre l'image en background */
     overflow: hidden;
+    padding: 2rem;
+    width: 100%;
+    top: 1%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
 }
 
-.listing ul {
-    width: 30%;
-    color: #fff;
-    float: left;
+.listes ul {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    /* pour mettre mes blocs en ligne */
 }
 
-.listing ul h3 {
+.listes ul:last-child {
+    margin-right: 3rem;
+}
+
+.listes ul h3 {
     font-family: 'Roboto';
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 150%;
 }
 
-.listing ul li {
+.listes ul li {
     list-style-type: none;
     font-family: 'Roboto';
     font-weight: lighter;
     font-size: 1.8rem;
 }
 
+
 /*  ------------------------------------------- FOOTER
 --------------------------------------------------------- */
 
-
 footer {
-  height: 7rem;
-  width: 80%;
-  margin: 10rem auto 0 auto;
-  padding-bottom: 6rem;
-  font-size: 1.8rem;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    height: 7rem;
+    width: 80%;
+    margin: 10rem auto 0 auto;
+    padding-bottom: 6rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #google {
-  width: 20%;
+    width: 20%;
 }
+
 
 /*  ------------- Formulaire Newsletter
 --------------------------------------- */
 
 #footer_form {
-  display: flex;
-  flex-flow: row wrap;
-  width: 55%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 55%;
 }
 
 #label {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 #newsletter {
-  width: 75%; 
+    width: 75%;
 }
+
 
 /*  ------------- Network icones
 ------------------------------------- */
 
-
 #network {
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #network a {
-  margin: 0 1rem;
-  transition: all .25s ease;
+    margin: 0 1rem;
+    transition: all .25s ease;
 }
 
 #network a:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 #adresse {
-  list-style : none;
+    list-style: none;
 }
 
 #adresse li {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
+
 
 /* ---------------------------------------
 ------ media queries 960
 -----------------------------------------*/
 
 @media screen and (max-width: 960px) {
-    
-    main .salade {
-        bottom: 15%;
-    }
-    
     /* ----- barre de navigation ----- */
-    
-    
     header {
         /* -- repositionner le header (nav + logo) -- */
         display: flex;
         justify-content: space-around;
     }
-    .logo img,
-    nav,
-    nav a {
+    header h2 {
+        display: none;
+    }
+    .logo img, nav, nav a {
         /* changement de méthode : flex */
         float: none;
     }
@@ -316,48 +450,37 @@ footer {
     nav a:nth-child(2) {
         border: none;
     }
-    
-    /* ----- section#accompagnement ----- */
-    
-    section#accompagnements h2 {
-        position: absolute;
-        top: 9rem;
-        left: 10%;
-        font-size: 8rem;
+    /* ----- section#description ----- */
+    section#description p {
+        margin: 3rem auto 3rem auto;
+        font-size: 1.3rem;
     }
-    
-    section#accompagnements p {
-        font-size: 1.5rem,   
+    /* ----- footer ----- */
+    footer {
+        flex-flow: row wrap;
+        height: auto;
+        margin: 8rem auto 0 auto;
+        padding-bottom: 3rem;
     }
-     /*  --------------- Footer
-  ----------------------------- */
-
-  footer {
-    flex-flow: row wrap;
-    height: auto;
-  }
+    #google {
+        display: none;
+    }
     /* -- Forcer l'adresse et le tel à passer en dessous -- */
-  #adresse {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .footer_form {
-    width: 60%;
-  }
-
-  #label { /* -- agrandir la zone email -- */
-    margin-left: 8rem;
-  }
-
-  #network a { 
-    margin: 0 3rem;
-  }
-
-  #google {
-    display: none;
-  }
+    #adresse {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_form {
+        width: 60%;
+    }
+    #label {
+        /* -- agrandir la zone email -- */
+        margin-left: 8rem;
+    }
+    #network a {
+        margin: 0 3rem;
+    }
 }
 
 
@@ -366,125 +489,138 @@ footer {
 -----------------------------------------*/
 
 @media screen and (max-width: 768px) {
-    
-
-    
     /* ----- navigation ----- */
-    
     nav a {
         font-size: 75%;
     }
-    
-    /* ----- section#accompagnement ----- */
-    
-    section#accompagnements h2 {
-        position: absolute;
+    .dropbtn {
+        display: none;
+    }
+    .disp480 {
+        display: block;
+        color: #fff;
+    }
+    nav {
         width: 100%;
-        top: 15rem;
-        left: 5%;
-        font-size: 4.8rem;
+        display: block;
     }
-    
-    section#accompagnements .accompagnements {
-        margin-top: -3.5rem;
+    nav ul li {
+        display: block;
+        width: 100%;
     }
-    
-    section#accompagnements p {
+    header {
+        /* passage en position relative avec un background noir */
+        text-align: center;
+        padding-top: 0;
+        position: relative;
+        background-color: #1f1f1f;
+        text-transform: uppercase;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+        font-size: 1.2rem;
+    }
+    #lien {
+        display: none;
+    }
+    /* ----- section#description ----- */
+    section#description .charcuteries {}
+    section#description {
+        margin-top: -.5rem;
+    }
+    section#description h2 {
+        display: block;
+        width: 100%;
+        font-size: 4.5rem;
+        line-height: 80%;
+    }
+    section#description p {
+        width: 90%;
+        margin: 0 auto 5% auto;
+        font-size: 1.3rem;
+    }
+    /* ----- section#listing ----- */
+    section#listing ul {
+        margin: 0;
+        padding: 0;
+        width: 40%;
+    }
+    section#listing h3 {
         font-size: 1.5rem;
     }
-    
-    .listing ul h3 {
-        font-size: 1.8rem;
+    section#listing ul li {
+        font-size: 1.3rem;
     }
-    
-    .listing ul li {
-        font-size: 1.4rem;
+    /* ----- footer ----- */
+    footer {
+        margin: 5rem auto 0 auto !important;
     }
-
-    /*  --------------- Footer
-  ----------------------------- */
-
-  /* -- Forcer l'adresse et le tel à passer en dessous -- */
-  #adresse {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  #label { /* -- agrandir la zone email -- */
-    margin-left: 0;
-  }
-
-  #network a { 
-    margin: 0 1rem;
-  } 
+    #adresse {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    #network a {
+        margin: 0 1rem;
+    }
+    #label {
+        margin-left: 0;
+    }
 }
+
 
 /* ---------------------------------------
 ------ media queries 480
 -----------------------------------------*/
 
 @media screen and (max-width: 480px) {
-    main .patates {
-        width: 60%;
-        top: 20%; 
+    main {
+        width: auto;
     }
-    
-    main .salade {
+    /* ----- barre de navigation ----- */
+    header {
+        /* passage en position relative avec un background noir */
+        text-align: center;
+        padding-top: 0;
+        position: relative;
+        background-color: #1f1f1f;
+        text-transform: uppercase;
+        padding-bottom: 0;
+    }
+    nav {
+        width: 100%;
+        display: block;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+    }
+    #lien {
+        /* -- Supprimer l'affichage du logo -- */
         display: none;
     }
-    
-    /* ----- barre de navigation ----- */
-    
-    header { /* passage en position relative avec un background noir */
-        
-		text-align: center;
-		padding-top: 0;
-		position: relative;
-		background-color: #1f1f1f;
-		text-transform: uppercase;
-        margin-bottom: 40%;
-	}
-
-	nav {
-		width: 100%;
-		display: block;
-	}
-
-	nav a {
-		width: 100%;
-		display: block;
-	}
-
-	#lien { /* -- Supprimer l'affichage du logo -- */
-		display: none;	
+    /* ----- section#description ----- */
+    section#description {
+        margin-bottom: 5rem;
     }
-
-
-    /* ----- section#accompagnement ----- */
-    
-    section#accompagnements h2 {
-        font-size: 5.5rem;
-        top: 15rem;
-        left: 0;
-    }
-    
-    .accompagnements {
-        margin-top: -2.4rem;
-        font-size: 5rem;
-    }
-    
-    section#accompagnements p {
-        padding-top: 3%;
-        font-size: 1.3rem;
-    }
-    
-    .listing ul {
+    section#description h2 {
         width: 100%;
+        text-align: center;
+        font-size: 4rem;
     }
-
+    /* ----- section#listing ----- */
+    .listes {
+        margin-top: -3rem;
+    }
+    section#listing ul li {
+        font-size: 1.2rem;
+    }
+    /* ----- footer ----- */
     footer {
-        margin: 1rem 2rem 5rem 2rem;
-        padding-bottom: 0;
-    }   
+        flex-flow: column;
+    }
+    #network {
+        margin-top: 3rem;
+    }
 }

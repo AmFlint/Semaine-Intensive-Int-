@@ -1,333 +1,358 @@
 @charset "UTF-8";
-
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
-	color: white;
+    font-size: 62.5%;
+    color: white;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
-	background-color: #2a2a2a;
+    background-color: #2a2a2a;
 }
 
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
-	clear: both;
+    clear: both;
 }
 
 a, a:visited {
-	color: white;
-	text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
+
 
 /*	-------------------- HEADER
 	------------------------------ */
 
 header {
-	width: 100%;
-	position: fixed;
-	padding-top: 2.5rem;
-	z-index: 1;
+    width: 100%;
+    position: fixed;
+    padding-top: 2.5rem;
+    z-index: 1;
 }
 
 header #lien {
-	width: 20%;
+    width: 20%;
 }
 
 .logo {
-	width: 20%;
-	float: left;
-	margin-top: -1rem;
-	margin: -2rem 0 0 2rem;
-	letter-spacing: 2px;
+    width: 20%;
+    float: left;
+    margin-top: -1rem;
+    margin: -2rem 0 0 2rem;
+    letter-spacing: 2px;
 }
 
-.logo h2, .logo img{
-	float: left;
-
-}
-
-.logo img {
-	width: 17%;
-
+.logo h2, .logo img {
+    float: left;
 }
 
 .logo h2 {
-	font-size: 2.5rem;
-	margin-top: 1rem;
-	font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-weight: 700;
 }
 
 nav {
-	float : right;
-	width: 70%;
-	font-size: 1.8rem;
+    float: right;
+    width: 70%;
+    font-size: 1.8rem;
 }
 
 nav a {
-	font-weight: 300;
-	float: right;
-	margin-right: 2rem;
-	padding: 1rem 1rem;
-	letter-spacing: 2px;
+    font-weight: 300;
+    float: right;
+    margin-right: 2rem;
+    padding: 1rem 1rem;
+    letter-spacing: 2px;
 }
 
 nav a:first-child {
-	margin-right: 5.5rem;
+    margin-right: 5.5rem;
 }
 
+.disp480 {
+    display: none;
+}
 
 .sliding {
-
     display: inline-block;
-
     position: relative;
-
-    padding-bottom: 3px;
-
+    padding-bottom: 14px;
 }
 
 .sliding:before {
-
     content: '';
-
     display: block;
-
     position: absolute;
-
     left: 0;
-
     bottom: 0;
-
     height: 3px;
-
     width: 0;
-
     transition: 0s ease, background .5s ease;
-
 }
 
 .sliding:after {
-
     content: '';
-
     display: block;
-
     position: absolute;
-
     right: 0;
-
     bottom: 0;
-
     height: 4px;
-
     width: 0;
-
-    background: rgba(255,255,255,0.7);
-
+    background: rgba(255, 255, 255, 0.7);
     transition: .5s ease;
-
 }
 
 .sliding:hover:before {
-
     width: 100%;
-
-    background: rgba(255,255,255,0.7);
-
+    background: rgba(255, 255, 255, 0.7);
     transition: .5s ease;
-
 }
 
 .sliding:hover:after {
-
     width: 100%;
-
     background: transparent;
-
     transition: all 0s ease;
-
 }
+
+
+/*  ------------------------- DROPDOWN MENU ----------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background: #2a2a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all .25s ease;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    margin-right: 0;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* 	------------------- SECTION TOP HAUT DE PAGE
 	---------------------------------------------- */
 
 #top {
-	position: relative;
-
+    position: relative;
 }
 
 .background {
-	height: 50%;
+    height: 50%;
 }
 
 .slogan {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -5rem;
-	margin-left: -20rem;
-	font-family: "Lora" serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5rem;
+    margin-left: -20rem;
+    font-family: "Lora" serif;
 }
 
 h1 {
-	font-size: 5.6rem;
-	text-transform: uppercase;
-	text-align: center;
-	margin-left: -2rem;
+    font-size: 5.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: -2rem;
 }
 
 .slogan p {
-	font-size: 2.2rem;
-	text-align: center;
+    font-size: 2.2rem;
+    text-align: center;
 }
 
 
-/* 	----------------- SECTION ICONES 
+/* 	----------------- SECTION ICONES
 	-------------------------------- */
 
 #icone {
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-	margin: 4.4rem auto 6rem auto;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin: 4.4rem auto 6rem auto;
 }
 
 .w25 {
-	width: 25%;
-	float: left;
+    width: 25%;
+    float: left;
 }
 
-
-
-.w25 figure img , .w25 figcaption {
-	margin-bottom: 1rem;
-	font-size: 16px;
-
+.w25 figure img, .w25 figcaption {
+    margin-bottom: 1rem;
+    font-size: 16px;
 }
 
 .w25 p {
-	font-size: 139%;
+    font-size: 139%;
 }
- 
 
-/* ----------------- SECTION PRODUITS 
+
+/* ----------------- SECTION PRODUITS
 	----------------------------------- */
 
 #produits {
-	width: 95%;
-	margin: 0 auto;
-	background-color: #1f1f1f;
-	display: flex;
-	justify-content: space-around;
+    width: 95%;
+    margin: 0 auto;
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: space-around;
 }
 
 #produits h2 {
-	text-align: center;
-	font-family: 'Roboto', serif;
-	font-size: 4.8rem;
-	font-weight: 700;
-	color: white;
-	margin-top: 1%;
-	padding: 15px;
-	letter-spacing: 0.1em;
+    text-align: center;
+    font-family: 'Roboto', serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #f39c12;
+    margin-top: 1%;
+    padding: 15px;
+    letter-spacing: 0.1em;
 }
 
 #produits article:first-child h2 {
-	color: white;
+    color: #c01d18;
 }
 
 .w50 img {
-	margin: 2rem auto;
+    margin: 2rem auto;
 }
 
 .w50 {
-	width: 46%;
-	margin: 2rem 0;
+    width: 46%;
+    margin: 2rem auto;
 }
 
 .w50 p {
-	width: 80%;
-	text-align: center;
-	font-size: 1.6rem;
-	margin: 1rem auto 0 auto;
-	line-height: 2rem;
-	line-height: 1.5;
+    width: 80%;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1rem auto 0 auto;
+    line-height: 2rem;
+    line-height: 1.5;
 }
 
-
-#top img, .w50 img, li img {
-	max-width: 100%;
+#top img, .w50 img, li img, .notre-restaurant img {
+    max-width: 100%;
     width: auto;
     height: auto;
     display: block;
 }
 
-/* 	------------------------------------ SECTION HISTOIRE 
+
+/* 	------------------------------------ SECTION HISTOIRE
 --------------------------------------------------------- */
 
+.notre-restaurant {
+    margin-top: 5rem;
+    width: 48%;
+}
+
 #histoire {
-	width: 95%;
-	margin: 0 auto;
-	background-color: #1f1f1f;
-	padding-bottom: 7.5rem;	
+    width: 95%;
+    margin: 0 auto;
+    background-color: #1f1f1f;
+    padding-bottom: 7.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-histoire {
+    width: 48%;
+    align-self: center;
 }
 
 #histoire h2 {
-	font-family: 'Roboto', serif;
-	font-size: 4.4rem;
-	text-align: center;
-	padding: 50px;
-	font-weight: 300;
+    font-family: 'Roboto', serif;
+    font-size: 4.4rem;
+    text-align: center;
+    padding: 50px;
+    font-weight: 300;
 }
 
 #bg {
-	font-weight: 700;	
-	letter-spacing: 0.1em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
 }
 
 #histoire ul {
-	list-style: none;
-	display: flex;
-	justify-content: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 #histoire p {
-	width: 70%;
-	margin: 0rem auto 5rem auto;
-	font-size: 1.6rem;
-	line-height: 1.5;
+    width: 40%;
+    margin: 0rem auto 5rem auto;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
 }
 
 #histoire ul li {
     width: 25%;
-	padding-top: 10rem;
-
+    padding-top: 10rem;
+    padding-left: 10rem;
 }
 
 #histoire ul li img {
-	width: auto;
-	margin: 0 auto;
+    width: auto;
+    margin: 0 auto;
 }
-
 
 
 /*	------------------------------- SECTION SLIDESHOW
@@ -336,8 +361,8 @@ h1 {
 section#citations {
     font: 3rem "Lora", serif;
     width: 95%;
-	background-color: #1f1f1f;
-	color: #c2332e;
+    background-color: #1f1f1f;
+    color: #;
     margin: 0 auto;
     height: 36rem;
 }
@@ -346,348 +371,354 @@ section#citations {
     font-style: italic;
 }
 
-.slid_1, .slid_2, .slid_3, .slid_4, .slid_5, .slid_6, .slid_7, .slid_8, .slid_9, .slid_10 {
+.slid_1, .slid_2, .slid_3, .slid_4, .slid_5 {
     width: 100%;
     height: 100%;
 }
 
 .slides {
-	
-	display: flex;
-	flex-flow: column;
-	text-align: center;
-	justify-content: center;
-
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
 }
 
 cite {
-	display:block;
-
+    display: block;
+    margin-left: 25rem;
 }
 
 q {
-	display: block;
-	padding-top: 17rem;
-	font-weight: 700;
+    display: block;
+    padding-top: 17rem;
+    font-weight: 700;
+    padding-bottom: 3rem;
 }
+
 
 /* 	--------------------------------- FOOTER
 	------------------------------------------ */
 
 footer {
-	height: 7rem;
-	width: 80%;
-	margin: 10rem auto 0 auto;
-	padding-bottom: 6rem;
-	font-size: 1.8rem;
-	color: #8a8a8a;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    height: 7rem;
+    width: 80%;
+    margin: 10rem auto 0 auto;
+    padding-bottom: 6rem;
+    font-size: 1.8rem;
+    color: #8a8a8a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
 /*	------------- Formulaire Newsletter
 --------------------------------------- */
+
 
 /*	------------- Network icones
 ------------------------------------- */
 
 #footer_form {
-	display: flex;
-	flex-flow: row wrap;
-	width: 55%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 55%;
 }
 
 #google {
-	width: 20%;
+    width: 20%;
 }
 
 #label {
-	font-family: 'Roboto';
-	font-weight: bolder;
-	text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 #newsletter {
-	width: 75%;
-	border-radius: 2px;	
+    width: 75%;
+    border-radius: 2px;
 }
 
 #network {
-	width: 25%;
-	display: flex;
-	justify-content: center;
-	align-items: center;	
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #network a {
-	margin: 0 1rem;
-	transition: all .25s ease;
+    margin: 0 1rem;
+    transition: all .25s ease;
 }
 
 #network a:hover {
-	opacity: 0.7;
+    opacity: 0.7;
 }
 
 #adresse {
-	list-style : none;
+    list-style: none;
 }
 
 #adresse li {
-	margin: 1rem 0;
+    margin: 1rem 0;
 }
+
 
 /*	--------------------------------------------------- Media Queries
 ------------------------------------------------------------------- */
 
 @media screen and (max-width: 960px) {
-
-	main {
-		width: auto;
-	}
-
-	/*	---------------- Header / faire disparaître le titre
+    main {
+        width: auto;
+    }
+    /*	---------------- Header / faire disparaître le titre
 	------------------------------ */
-
-	header h2 {
-		display: none;
-	}
-
-	/* 	---------------- Section top
+    header h2 {
+        display: none;
+    }
+    nav a {
+        font-size: 1.5rem;
+    }
+    /* 	---------------- Section top
 	------------------------------ */
-
-	.slogan {	/*	----- Réajuster le slogan en absolute */
-		margin: -3rem auto auto -18rem;
-	}
-
-	h1 {		/* réduire la taille (origine 6) */
-		font-size: 4.7rem;
-	}
-
-	.slogan p {	/* réduire la taille (origine 2.5) */
-		font-size: 2.2rem;
-	}
-	
-	/*	---------------- Section Icones
+    .slogan {
+        /*	----- Réajuster le slogan en absolute */
+        margin: -3rem auto auto -18rem;
+    }
+    h1 {
+        /* réduire la taille (origine 6) */
+        font-size: 4.7rem;
+    }
+    .slogan p {
+        /* réduire la taille (origine 2.5) */
+        font-size: 2.2rem;
+    }
+    /*	---------------- Section Icones
 	----------------------------------- */
-
-	.w25 {	/*	-- 2 colonnes au lieu de 4 -- */
-		width: 50%;
-		margin-bottom: 2rem;
-	}
-	
-	/*	---------------- Section histoire --> img des partenaires
+    .w25 {
+        /*	-- 2 colonnes au lieu de 4 -- */
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+    /*	---------------- Section histoire --> img des partenaires
 	------------------------------------- */
-
-	#histoire ul {
-		flex-flow: row wrap;
-	}
-		/* -- Forcer 2 colonnes -- */
-	#histoire ul li {
-		width: 50%;
-		margin-bottom: 2rem;
-	}
-	
-	/*	--------------- Footer
+    #histoire ul {
+        flex-flow: row wrap;
+    }
+    /* -- Forcer 2 colonnes -- */
+    #histoire ul li {
+        width: 50%;
+        margin-bottom: 2rem;
+        padding-left: 0;
+    }
+    /*	--------------- Footer
 	----------------------------- */
-
-	footer {
-		flex-flow: row wrap;
-		height: auto;
-	}
-		/* -- Forcer l'adresse et le tel à passer en dessous -- */
-	#adresse {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.footer_form {
-		width: 60%;
-	}
-
-	#label { /* -- agrandir la zone email -- */
-		margin-left: 8rem;
-	}
-
-	#network a { 
-		margin: 0 3rem;
-	}
-
-	#google {
-		display: none;
-	}
+    footer {
+        flex-flow: row wrap;
+        height: auto;
+    }
+    /* -- Forcer l'adresse et le tel à passer en dessous -- */
+    #adresse {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_form {
+        width: 60%;
+    }
+    #label {
+        /* -- agrandir la zone email -- */
+        margin-left: 8rem;
+    }
+    #network a {
+        margin: 0 3rem;
+    }
+    #google {
+        display: none;
+    }
 }
-
 
 @media screen and (max-width: 768px) {
-	
-	/*	------------ HEADER
-	----------------------- */
-	
-	header { /* -- repositionner le header (nav + logo) -- */
-		display: flex;
-		justify-content: space-around;
-	}
-
-	.logo img, nav, nav a { /* changement de méthode : flex */
-		float: none;
-	}
-	
-	.logo {
-		margin-left: 2rem;
-	}
-
-	nav { /* repositionner les liens dans la nav */
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-between;
-	}
-
-	nav a {
-		margin-right: auto;
-	}
-
-	nav a:first-child { /* Supprimer la margin mise en place sur grand écran */
-		margin-right: auto;
-	}
-
-	nav a:nth-child(2) {
-		border: none;
-	}
-	
-	/*	-------------- Section TOP --> Repositionner slogan / tire 
+    /*  ------------ HEADER
+----------------------- */
+    header {
+        /* -- repositionner le header (nav + logo) -- */
+        display: flex;
+        justify-content: space-around;
+    }
+    .logo img, nav, nav a {
+        /* changement de méthode : flex */
+        float: none;
+    }
+    .logo {
+        margin-left: 2rem;
+    }
+    nav {
+        /* repositionner les liens dans la nav */
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    nav a {
+        margin-right: auto;
+    }
+    nav a {
+        font-size: 1.5rem;
+    }
+    nav a:first-child {
+        /* Supprimer la margin mise en place sur grand écran */
+        margin-right: auto;
+    }
+    nav a:nth-child(2) {
+        border: none;
+    }
+    .dropbtn {
+        display: none;
+    }
+    .disp480 {
+        display: block;
+        color: #fff;
+    }
+    nav {
+        width: 100%;
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    header {
+        /* passage en position relative avec un background noir */
+        text-align: center;
+        padding-top: 0;
+        position: relative;
+        background-color: #1f1f1f;
+        text-transform: uppercase;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+        font-size: 1.2rem;
+    }
+    #lien {
+        display: none;
+    }
+    /*	-------------- Section TOP --> Repositionner slogan / tire
 	------------------------------------ */
-
-	.slogan {
-		margin: -3rem auto auto -15rem;
-	}
-	
-	h1 {
-		font-size: 4rem;
-	}
-
-	.slogan p {
-		font-size: 1.8rem;
-	}
-	
-	/*	-------------- SECTION Produits
+    .slogan {
+        margin: -3rem auto auto -15rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .slogan p {
+        font-size: 1.8rem;
+    }
+    /*	-------------- SECTION Produits
 	------------------------------------ */
-
-	#produits { /* passer les éléments col l'un sous l'autre */
-		flex-direction: column;
-	}
-
-	.w50 { /* -- passer de 2 à 1 une colonne par ligne -- */
-		width: 100%;
-	}
-
-	.w50 img { /* -- centrer les images -- */
-		margin: 0 auto;
-	}
-
-	#dispnone768 { /* -- Changer l'affichage du titre : raccourcir */
-		display: none;
-	}
-
-	#adresse {
-		flex-direction: column;
-		text-align: center;
-		margin-top: 2rem;
-	}
-
-	#network a {
-		margin: 0 1rem;
-	}
-
-	#label {
-		margin-left: 0;
-	}
+    #produits {
+        /* passer les éléments col l'un sous l'autre */
+        flex-direction: column;
+    }
+    .w50 {
+        /* -- passer de 2 à 1 une colonne par ligne -- */
+        width: 100%;
+    }
+    .w50 img {
+        /* -- centrer les images -- */
+        margin: 0 auto;
+    }
+    /*	---- Section Histoire ---- */
+    #histoire {
+        flex-direction: column;
+    }
+    #histoire ul li {
+        padding-left: 0;
+    }
+    .notre-restaurant {
+        width: 100%;
+    }
+    .content-histoire {
+        width: 100%;
+    }
+    #dispnone768 {
+        /* -- Changer l'affichage du titre : raccourcir */
+        display: none;
+    }
+    #adresse {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    #network a {
+        margin: 0 1rem;
+    }
+    #label {
+        margin-left: 0;
+    }
 }
+
 @media screen and (max-width: 600px) {
-	.slogan {
-		margin :-2rem auto auto -15rem;
-	}
-
-	h1 {
-		font-size: 3.5rem;
-	}
-
-	.slogan p {
-		font-size: 1.4rem;
-	}
+    nav a {
+        font-size: 1.5rem;
+    }
+    .slogan {
+        margin: -2rem auto auto -15rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    .slogan p {
+        font-size: 1.4rem;
+    }
 }
+
 @media screen and (max-width: 480px) {
-
-	/*	----------- HEADER
+    /*	----------- HEADER
 	--------------------------- */
-	
-	header { /* passage en position relative avec un background noir */
-		text-align: center;
-		padding-top: 0;
-		position: relative;
-		background-color: #1f1f1f;
-		text-transform: uppercase;
-	}
-
-	nav {
-
-		width: 100%;
-		display: block;
-	}
-
-	nav a {
-		width: 100%;
-		display: block;
-	}
-
-	#lien { /* -- Supprimer l'affichage du logo -- */
-		display: none;	
-	}
-	
-	/*	--------------- Section Icones
+    #lien {
+        /* -- Supprimer l'affichage du logo -- */
+        display: none;
+    }
+    /*	--------------- Section Icones
 	--------------------------------- */
-
-	.w25 { /* -- 1 colonnes par ligne, 4 lignes */
-		width: 100%;
-		clear: both;
-	}
-
-	/*	--------------- Section Produits
+    .w25 {
+        /* -- 1 colonnes par ligne, 4 lignes */
+        width: 100%;
+        clear: both;
+    }
+    /*	--------------- Section Produits
 	---------------------------------- */
-
-	.w50 h2 { /* -- Espacer le titre de l'image -- */
-		margin-bottom: 2rem;
-	}
-
-	.w50:first-child { /* -- réduire l'espace entre les deux articles -- */
-		margin-bottom: 0;
-	}
-
-	.w50 img{ /* -- espacer la photo du paragraphe -- */
-		margin-bottom: 2rem;
-	}
-	
-	/*	-------------- Section Histoire
+    .w50 h2 {
+        /* -- Espacer le titre de l'image -- */
+        margin-bottom: 2rem;
+    }
+    .w50:first-child {
+        /* -- réduire l'espace entre les deux articles -- */
+        margin-bottom: 0;
+    }
+    .w50 img {
+        /* -- espacer la photo du paragraphe -- */
+        margin-bottom: 2rem;
+    }
+    /*	-------------- Section Histoire
 	------------------------------------ */
-
-	#histoire ul {  /* -- Passer les img partenaires les unes sous les autres -- */
-		flex-direction: column;
-		align-items: center;
-	}
-
-	#histoire ul li { /* -- Repositionner la colonne d'images -- */
-		width: 60%;
-	}
-
-	/*	--------------- Section Citations / Carousel
+    #histoire ul {
+        /* -- Passer les img partenaires les unes sous les autres -- */
+        flex-direction: column;
+        align-items: center;
+    }
+    #histoire ul li {
+        /* -- Repositionner la colonne d'images -- */
+        width: 60%;
+        padding-left: 0;
+    }
+    /*	--------------- Section Citations / Carousel
 	------------------------------------- */
-
-	#citations { /* Supprimer l'affichage du carousel de citations en 480px -- */
-		display: none;
-	}
+    #citations {
+        /* Supprimer l'affichage du carousel de citations en 480px -- */
+        display: none;
+    }
 }
-
-
-
-
-
