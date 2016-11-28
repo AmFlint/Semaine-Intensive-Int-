@@ -13,6 +13,7 @@
 <body>
 	<main class="clearfix">
 		<header class="clearfix">
+			<button class="hamburger disp480">&#9776;</button>
 			<!-- Navigation et logo -->
 			<a href="../../index.html" id="lien">
 				<div class="logo">
@@ -20,7 +21,7 @@
 					<h2>&nbsp;afondre</h2>
 				</div>
 			</a>
-			<nav class="clearfix">
+			<nav class="clearfix navigation">
 				<ul>
 					<li><a href="../../index.html" class="disp480">Accueil</a></li>
 					<li>
@@ -173,6 +174,29 @@
 			</ul>
 		</footer>
 	</main>
+	<script type="text/javascript" src="../../jquery-3.1.1.js"></script>
+	    <script type="text/javascript">
+	        var liste = document.querySelector('.navigation ul');
+	        var burger = document.querySelector(".hamburger");
+	        var mq = window.matchMedia("(min-width : 769px)");
+	        window.addEventListener("resize", function() {
+	            if (mq.matches) {
+	                    liste.style.display = "block";
+	                } else {
+	                    liste.style.display = "none";
+	                    burger.style.transform = 'rotate(0deg)';
+	                }
+	        });
+	            burger.addEventListener("click", function() {
+	                if (liste.style.display == 'block') {
+	                    liste.style.display = 'none';
+	                    burger.style.transform = "rotate(0deg)";
+	                } else {
+	                    liste.style.display = "block";
+	                    burger.style.transform = "rotate(90deg)";   
+	                } 
+	            });
+	    </script>
 </body>
 
 </html>

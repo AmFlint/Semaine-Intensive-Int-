@@ -43,6 +43,18 @@ a, a:visited {
 /*	-------------------- HEADER
 	------------------------------ */
 
+.hamburger{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+
 header {
     width: 100%;
     position: fixed;
@@ -453,10 +465,15 @@ footer {
 
 #adresse {
     list-style: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #adresse li {
     margin: 1rem 0;
+    text-align: center;
 }
 
 
@@ -572,6 +589,11 @@ footer {
         width: 100%;
         display: block;
     }
+
+    .navigation ul {
+        display: none;
+    }
+    
     nav ul li {
         display: block;
         width: 100%;
@@ -614,8 +636,6 @@ footer {
         margin-left: 0;
     }
 }
-
-@media screen and (max-width: 600px) {}
 
 @media screen and (max-width: 480px) {
     /*  ----------- HEADER

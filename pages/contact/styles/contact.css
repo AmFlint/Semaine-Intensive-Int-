@@ -36,6 +36,18 @@ a, a:visited {
 /*  ---------------------------------- HEADER
 ------------------------------------------------ */
 
+.hamburger{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+
 header {
     width: 100%;
     position: fixed;
@@ -391,6 +403,9 @@ footer {
 
 #adresse {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #adresse li {
@@ -508,6 +523,11 @@ footer {
         width: 100%;
         display: block;
     }
+
+    .navigation ul {
+        display: none;
+    }
+
     nav ul li {
         display: block;
         width: 100%;

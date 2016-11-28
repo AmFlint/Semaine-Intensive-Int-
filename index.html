@@ -13,6 +13,7 @@
 <body>
 	<main>
 		<header class="clearfix">
+			<button class="hamburger disp480">&#9776;</button>
 			<!-- Navigation et logo -->
 			<a href="#" id="lien">
 				<div class="logo">
@@ -20,7 +21,7 @@
 					<h2>&nbsp;afondre</h2>
 				</div>
 			</a>
-			<nav class="clearfix">
+			<nav class="clearfix navigation">
 				<ul>
 					<li><a href="#" class="disp480">Accueil</a></li>
 					<li>
@@ -118,58 +119,55 @@
 		</section>
 		<section id="histoire">
 			<!-- Section Histoire -->
-			<div class="notre-restaurant">
-				<img src="img-content/notre-restaurant.png">
+			<div class="histoire-restaurant">
+				<div class="notre-restaurant">
+					<img src="img-content/notre-restaurant.png">
+				</div>
+				<div class="content-histoire">
+					<h2><span id="bg">L'histoire</span> <span id="dispnone768"></br>de notre restaurant</span></h2>
+					<p><strong>Dix années</strong> à peine ont suffi pour développer ce concept qui accueille aujourd'hui plus de 200 clients par jour et qui a permis de créer près de 50 emplois. Une cuisine simple et vraie, aux goûts authentiques.</p>
+				</div>
 			</div>
-			<div class="content-histoire">
-				<h2><span id="bg">L'histoire</span> <span id="dispnone768"></br>de notre restaurant</span></h2>
-				<p><strong>Dix années</strong> à peine ont suffi pour développer ce concept qui accueille aujourd'hui plus de 200 clients par jour et qui a permis de créer près de 50 emplois. Une cuisine simple et vraie, aux goûts authentiques.</p>
-			</div>
-		</section>
-		<section id="citations" class="clearfix">
-			<div class="slides slid_1" style="background: url(img-content/détouré/rene-pate.png) no-repeat center 1rem">
-				<q>La joie de vivre et le jambon, y'a pas trente-six recettes du bonheur !</q>
-				<cite>René Pâté</cite>
-			</div>
-			<div class="slides slid_2" style="background: url(img-content/détouré/patrice-saucisse.png) no-repeat center 1rem">
-				<q>Ça y est… je vois trouble. C’est le manque de gras, je me dessèche.</q>
-				<cite>Patrice Saucisse</cite>
-			</div>
-			<div class="slides slid_3" style="background: url(img-content/détouré/remond-frometon.png) no-repeat center 1rem">
-				<q>Je juge un restaurant par son Pain et son Fromage.</q>
-				<cite>Rémond Frometon</cite>
-			</div>
-			<div class="slides slid_4" style="background: url(img-content/détouré/armand-vinblanc.png) no-repeat center 1rem">
-				<q>La seule arme qui m'intéresse, c'est le tire-bouchon.</q>
-				<cite>Armand VinBlanc</cite>
-			</div>
-			<div class="slides slid_5" style="background: url(img-content/chef1.png) no-repeat center 1rem">
-				<q>Ça a été une merde noire, c'était catastrophique !</q>
-				<cite>Philippe Etchebest</cite>
-			</div>
-			<script type="text/javascript">
-				var slideIndex = 0;
-				carousel();
+			<div id="citations" class="clearfix">
+				<div class="slides slid_1" style="background: url(img-content/détouré/rene-pate.png) no-repeat center 1rem">
+					<q>La joie de vivre et le jambon, y'a pas trente-six recettes du bonheur !</q>
+					<cite>René Pâté</cite>
+				</div>
+				<div class="slides slid_2" style="background: url(img-content/détouré/patrice-saucisse.png) no-repeat center 1rem">
+					<q>Ça y est… je vois trouble. C’est le manque de gras, je me dessèche.</q>
+					<cite>Patrice Saucisse</cite>
+				</div>
+				<div class="slides slid_3" style="background: url(img-content/détouré/remond-frometon.png) no-repeat center 1rem">
+					<q>Je juge un restaurant par son Pain et son Fromage.</q>
+					<cite>Rémond Frometon</cite>
+				</div>
+				<div class="slides slid_4" style="background: url(img-content/détouré/armand-vinblanc.png) no-repeat center 1rem">
+					<q>La seule arme qui m'intéresse, c'est le tire-bouchon.</q>
+					<cite>Armand VinBlanc</cite>
+				</div>
+				<div class="slides slid_5" style="background: url(img-content/chef1.png) no-repeat center 1rem">
+					<q>Ça a été une merde noire, c'était catastrophique !</q>
+					<cite>Philippe Etchebest</cite>
+				</div>
+				<script type="text/javascript">
+					var slideIndex = 0;
+					carousel();
 
-				function carousel() {
-					var i;
-					var x = document.getElementsByClassName("slides");
-					for (i = 0; i < x.length; i++) {
-						x[i].style.display = "none";
+					function carousel() {
+						var i;
+						var x = document.getElementsByClassName("slides");
+						for (i = 0; i < x.length; i++) {
+							x[i].style.display = "none";
+						}
+						slideIndex++;
+						if (slideIndex > x.length) {
+							slideIndex = 1
+						}
+						x[slideIndex - 1].style.display = "block";
+						setTimeout(carousel, 10000); // La citation change toutes les 5 secondes
 					}
-					slideIndex++;
-					if (slideIndex > x.length) {
-						slideIndex = 1
-					}
-					x[slideIndex - 1].style.display = "block";
-					setTimeout(carousel, 10000); // La citation change toutes les 5 secondes
-				}
-			</script>
-		</section>
-		<section id="histoire">
-
-
-
+				</script>
+			</div>
 			<ul>
 				<!-- Liste des partenaires -->
 				<li><img src="img-content/express.png" alt="logo express"></li>
@@ -178,7 +176,6 @@
 				<li><img src="img-content/echos.png" alt="logo echos"></li>
 			</ul>
 		</section>
-
 		<footer>
 			<form class="footer_form">
 				<label for="newsletter" id="label">Notre Newsletter</br></label>
@@ -197,6 +194,29 @@
 			</ul>
 		</footer>
 	</main>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		var liste = document.querySelector('.navigation ul');
+		var burger = document.querySelector(".hamburger");
+		var mq = window.matchMedia("(min-width : 769px)");
+	        window.addEventListener("resize", function() {
+	            if (mq.matches) {
+	                    liste.style.display = "block";
+	                } else {
+	                    liste.style.display = "none";
+	                    burger.style.transform = 'rotate(0deg)';
+	                }
+	        });
+			burger.addEventListener("click", function() {
+				if (liste.style.display == 'block') {
+					liste.style.display = 'none';
+					burger.style.transform = "rotate(0deg)";
+				} else {
+					liste.style.display = "block";
+					burger.style.transform = "rotate(90deg)";	
+				} 
+			});
+	</script>
 </body>
 
 </html>
