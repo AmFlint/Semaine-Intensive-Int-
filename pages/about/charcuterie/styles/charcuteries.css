@@ -44,6 +44,18 @@ body {
 
 /*	-------------------- HEADER
 	------------------------------ */
+    
+.hamburger{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
 
 header {
     width: 100%;
@@ -358,10 +370,15 @@ footer {
 #adresse {
     list-style: none;
     font-family: 'Roboto';
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #adresse li {
     margin: 1rem 0;
+    text-align: center;
 }
 
 
@@ -445,24 +462,34 @@ footer {
         overflow-x: hidden;
     }
     /* ----- navigation ----- */
+
     nav a {
         font-size: 75%;
     }
+
     .dropbtn {
         display: none;
     }
+
     .disp480 {
         display: block;
         color: #fff;
     }
+
     nav {
         width: 100%;
         display: block;
     }
+
+    .navigation ul {
+        display: none;
+    }
+
     nav ul li {
         display: block;
         width: 100%;
     }
+
     header {
         /* passage en position relative avec un background noir */
         text-align: center;
@@ -471,32 +498,40 @@ footer {
         background-color: #1f1f1f;
         text-transform: uppercase;
     }
+
     nav a {
         width: 100%;
         display: block;
         font-size: 1.2rem;
     }
+
     #lien {
         display: none;
     }
+
     /* ----- section#description ----- */
+
     section#description .charcuteries {
         margin-top: -5rem;
     }
+
     section#description {
         margin-top: -3rem;
     }
+
     section#description h2 {
         display: inline-block;
         width: 100%;
         font-size: 5.4rem;
         line-height: 170%;
     }
+
     section#description p {
         width: 90%;
         margin: -3rem auto 5% auto;
         font-size: 1.3rem;
     }
+    
     /* ----- section#listing ----- */
     section#listing ul {
         margin: 0;
